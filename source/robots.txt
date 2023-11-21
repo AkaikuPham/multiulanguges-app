@@ -20,5 +20,5 @@ Disallow: /template/
 Disallow: /pay.php
 Disallow: /pay2.php
 Disallow: /weixinPay.php
-Disallow: /order_confirm.html
-Disallow: /shop.html
+Disallow: /order_confirm.php
+Disallow: /shop.php
