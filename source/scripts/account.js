@@ -1,4 +1,4 @@
-(function($){
+(function ($) {
     //是否已登录
     checkIfLogin();
 
@@ -7,21 +7,21 @@
 
 })(jQuery);
 
-function checkIfLogin(){
-    var userId=$.cookie('userId');
-    if(!userId){
-        location.href="/index.html";//跳到首页
+function checkIfLogin() {
+    var userId = $.cookie('userId');
+    if (!userId) {
+        location.href = "/index.php";//跳到首页
     }
 }
 
 
 //适配高度
-function processLeftHeight(){
-    var rightHeight=$(".content-right").height();
-    rightHeight-=40;
-    var screenHeight=window.screen.height; //屏幕高
-    if(rightHeight<screenHeight){
-        rightHeight=screenHeight;
+function processLeftHeight() {
+    var rightHeight = $(".content-right").height();
+    rightHeight -= 40;
+    var screenHeight = window.screen.height; //屏幕高
+    if (rightHeight < screenHeight) {
+        rightHeight = screenHeight;
     }
     $(".content-left,.menu-left").height(rightHeight);
 }

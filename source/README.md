@@ -19,7 +19,7 @@
 
 ### 技术架构：后台PHP+Mysql 前台jQuery、html、CSS、Bootstrap
 
-### 网站结构：首页index.html 菜品展示页shop.html 
+### 网站结构：首页index.php 菜品展示页shop.php 
 
 ### 个人中心：我的地址；余额；代金券；订单；我的积分；设置。
 
