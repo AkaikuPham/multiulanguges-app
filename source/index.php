@@ -31,51 +31,7 @@
 </head>
 
 <body>
-
-    <!--header部分-->
-    <div class="header shadow">
-        <div class="search-result">
-        </div>
-        <div class="header-left fl">
-            <div class="icon fl"></div>
-            <a class="weixin-dingfan fw" href="#">微信订饭</a>
-            <a class="logo" href="/"></a>
-            <div class="search">
-                <img class="search-icon" src="/images/icon_search.png" width="20" height="20">
-                <input id="search-input" class="search-input" type="text" placeholder="请输入地点" onkeypress="onKeySearch()">
-                <span id="search-del" class="search-del">&times;</span>
-            </div>
-            <div class="clear"></div>
-        </div>
-        <div class="header-right fr">
-            <div class="login fl">
-
-                <span class="header-operater">
-                    <a href="/index.php">首页</a>
-                    <a href="/account/order">我的订单</a>
-                    <a href="/about.php?p=lianxiwomen">联系我们</a>
-                </span>
-                <a id="header-login" class="navBtn f-radius f-select n" data-reveal-id="myModal" data-animation="fade">
-                    登录
-                </a>
-            </div>
-            <div id="cart" class="cart fr">
-                <img class="cart-icon" src="images/icon_cart_22_22.png">
-            </div>
-            <div id="user" class="user fr n">
-                <img class="user-icon" src="images/icon_my.png">
-            </div>
-        </div>
-        <ul id="subnav" class="subnav subnav-shadow n">
-            <li><a href="/account/setting" target="">账号设置</a></li>
-            <li><a href="/account/order" target="">我的订单</a></li>
-            <li><a href="/account/balance" target="">我的余额</a></li>
-            <li><a href="/account/score" target="">我的积分</a></li>
-            <li><a href="/account/address" target="">我的地址</a></li>
-            <li><a id="sub-logout" href="" target="">退出</a></li>
-        </ul>
-    </div>
-    <!--内容部分-->
+    <?php require_once 'layouts/header.php'; ?>
     <div class="place-content">
 
         <div class="place-wrap-1">
@@ -195,164 +151,16 @@
         </div>
 
 
-        <div class="footer-content">
-            <div class="footer-content-entrance">
-                <a class="footer-content-link" href="/about.php?p=guanyuwomen">关于我们</a>
-                <span class="footer-content-separator">|</span>
-                <a class="footer-content-link footer-content-weixing">关注微信
-                    <img class="weixin-pic" src="images/qr_code.jpg">
-                </a>
-                <span class="footer-content-separator">|</span>
-                <a class="footer-content-link" href="/about.php?p=tousujianyi">投诉建议</a>
-                <span class="footer-content-separator">|</span>
-                <a class="footer-content-link kaidian_address" href="/about.php?p=shangjiaruzhu">商家入驻</a>
+        <?php require_once 'layouts/footer.php' ?>
 
-            </div>
-            <div class="footer-content-copyright">©2023 <a target="_blank">京ICP证020666号</a> </div>
-        </div>
-
-        <div class="shop-cart shadow n">
-            <div class="shop-head">
-                购物车<a class="shop-clear">[清空]</a>
-            </div>
-            <div class="shop-body">
-
-
-                <div class="isnull">
-                    <span></span>
-                    <b>购物车空空如也</b>
-                </div>
-            </div>
-            <div class="shop-bottom">
-                <div class="bottom-price fl">总计：￥<label>32</label>
-                </div>
-                <div class="bottom-icon"></div>
-                <div class="bottom-pay fr">
-                    <a id="cart-pay">结算</a>
-                </div>
-            </div>
-        </div>
+        <?php require_once 'layouts/shop_cart.php'; ?>
 
         <ul class="place-nav n">
             <li><a class="city">北京</a></li>
             <li><a class="city">天津</a></li>
         </ul>
     </div>
-
-    <div id="myModal" class="reveal-modal">
-        <div id="loginform" class="loginform n">
-            <div>
-                <div class="loginformfield">
-                    <span class="form-icon"><img src="images/logo-50-50.jpg"></span>
-                </div>
-                <div class="loginformfield">
-                    <span class="form-title">
-                        <h2>使用手机号登录订饭组</h2>
-                    </span>
-                </div>
-                <div class="loginformfield">
-                    <label class="field-name">手机号:</label>
-                    <input id="phone-1" placeholder="请输入您的手机号">
-                    <div class="loginformfield-hint form-error">
-                        <span id="login-phone-error"></span>
-                    </div>
-                </div>
-                <div class="loginformfield">
-                    <label class="field-name">密码:</label>
-                    <span class="fp"><a href="#" id="forget-password" class="forget-password">忘记密码？</a></span>
-                    <input id="login-pwd" type="password" placeholder="密码">
-                    <div class="loginformfield-hint form-error">
-                        <span id="login-pwd-error"></span>
-                    </div>
-                </div>
-            </div>
-            <div class="loginform-buttons">
-                <a id="checkin" class="save-btn" href="#">登录</a>
-                <span>还没有账号？<a id="register">创建一个</a></span>
-            </div>
-        </div>
-        <div id="registerform" class="registerform n">
-            <div>
-                <div class="loginformfield">
-                    <span class="form-icon"><img src="images/logo-50-50.jpg"></span>
-                </div>
-                <div class="loginformfield">
-                    <span class="form-title">
-                        <h2>创建新账号</h2>
-                    </span>
-                </div>
-                <div class="loginformfield">
-                    <label class="field-name">手机号:</label>
-                    <input id="phone-2" placeholder="请输入您的手机号">
-                    <div class="loginformfield-hint form-error">
-                        <span id="register-phone-error"></span>
-                    </div>
-                </div>
-                <!--                <div class="loginformfield field-confirm-code">-->
-                <!--                    <label class="field-name">验证码:</label>-->
-                <!--                    <input   id="register-confirm-code" placeholder="请输入验证码">-->
-                <!--                    <button id="register-code" class="phone-code-btn">获取验证码</button>-->
-                <!--                    <input type="hidden" id="register-hid-code">-->
-                <!--                    <div class="loginformfield-code-hint form-error">-->
-                <!--                        <span id="register-code-error"></span>-->
-                <!--                    </div>-->
-                <!--                </div>-->
-                <div class="loginformfield">
-                    <label class="field-name">请输入密码:</label>
-                    <input id="register-pwd" type="password" placeholder="请输入6位以上字母或数字密码">
-                    <div class="loginformfield-hint form-error">
-                        <span id="register-pwd-error"></span>
-                    </div>
-                </div>
-            </div>
-            <div class="loginform-buttons">
-                <a id="create" class="save-btn" href="#">创建</a>
-                <span>已经有账号？<a id="login">登录</a></span>
-            </div>
-        </div>
-        <div id="chpwdform" class="chpwdform n">
-            <div>
-                <div class="loginformfield">
-                    <span class="form-icon"><img src="images/logo-50-50.jpg"></span>
-                </div>
-                <div class="loginformfield">
-                    <span class="form-title">
-                        <h2>修改密码</h2>
-                    </span>
-                </div>
-                <div class="loginformfield">
-                    <label class="field-name">手机号:</label>
-                    <input id="phone-3" placeholder="请输入您的手机号">
-                    <div class="loginformfield-hint form-error">
-                        <span id="chpwd-phone-error"></span>
-                    </div>
-                </div>
-                <div class="loginformfield field-confirm-code">
-                    <label class="field-name">验证码:</label>
-                    <input id="chpwd-confirm-code" placeholder="请输入验证码">
-                    <button id="chpwd-code" class="phone-code-btn">获取验证码</button>
-                    <input type="hidden" id="chpwd-hid-code">
-                    <div class="loginformfield-code-hint form-error">
-                        <span id="chpwd-code-error"></span>
-                    </div>
-                </div>
-                <div class="loginformfield">
-                    <label class="field-name">新密码:</label>
-                    <input id="chpwd-pwd" type="password" placeholder="请输入6位以上字母或数字密码">
-                    <div class="loginformfield-hint form-error">
-                        <span id="chpwd-pwd-error"></span>
-                    </div>
-                </div>
-            </div>
-            <div class="loginform-buttons">
-                <a id="chpwd" class="save-btn" href="#">确定</a>
-                <span>没有忘记密码？<a id="back-login">返回</a></span>
-            </div>
-        </div>
-
-
-        <a class="close-reveal-modal"><img src="images/icon_close.png" height="24" width="24"></a>
-    </div>
+    <?php require_once 'layouts/my_modal.php'; ?>
 
     <!--提示框-->
     <div id="alertModel" class="alertModel">

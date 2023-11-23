@@ -25,39 +25,7 @@
 </head>
 
 <body>
-    <!--header部分-->
-    <div class="header shadow">
-        <div class="header-left fl">
-            <div class="icon fl"></div>
-            <a class="fw" href="#">微信订饭</a>
-        </div>
-        <div class="header-right fr">
-            <div class="login fl">
-                <span id="header-user" class="header-user fw n"> </span>
-                <a id="header-login" class="navBtn f-radius f-select n" data-reveal-id="myModal" data-animation="fade">
-                    登录
-                </a>
-            </div>
-            <div id="cart" class="cart fr">
-                <img class="cart-icon" src="../images/icon_cart_22_22.png">
-            </div>
-            <div id="user" class="user fr ">
-                <img class="user-icon" src="../images/icon_my.png">
-            </div>
-        </div>
-        <div class="title">
-            订饭组|好吃 新鲜 干净
-        </div>
-        <ul id="subnav" class="subnav subnav-shadow n">
-            <li><a href="setting.php" target="">账号设置</a></li>
-            <li><a href="order.html" target="">我的订单</a></li>
-            <li><a href="balance.php" target="">我的余额</a></li>
-            <li><a href="cash.php" target="">代金券</a></li>
-            <li><a href="balance.php" target="">我的地址</a></li>
-            <li><a id="sub-logout" href="" target="">退出</a></li>
-        </ul>
-    </div>
-    <!--主体-->
+    <?php require_once '../layouts/header.php'; ?>
     <div class="content">
         <!--左侧导航-->
         <div class="content-left fl">
@@ -174,21 +142,7 @@
         </div>
         <div class="clear"></div>
     </div>
-    <div class="footer-content">
-        <div class="footer-content-entrance">
-            <a class="footer-content-link">关于我们</a>
-            <span class="footer-content-separator">|</span>
-            <a class="footer-content-link">关注微博</a>
-            <span class="footer-content-separator">|</span>
-            <a class="footer-content-link footer-content-weixing">关注微信
-                <img class="weixin-pic" src="/images/qr_code.jpg">
-            </a>
-            <span class="footer-content-separator">|</span>
-            <a class="footer-content-link kaidian_address">商家入驻</a>
-
-        </div>
-        <div class="footer-content-copyright">©2023 <a target="_blank">京ICP证020666号</a> </div>
-    </div>
+    <?php require_once '../layouts/footer.php'; ?>
     <script src="/scripts/md5.js"></script>
     <script src="/scripts/login.js"></script>
     <script src="/scripts/cart.lib.js"></script>
