@@ -909,7 +909,40 @@
             </div>
         </div>
     </div>
-    <?php require_once 'layouts/header.php'; ?>
+    <!--header部分-->
+    <div class="header shadow">
+            <div class="header-left fl">
+                <div class="icon fl"></div>
+                <a class="weixin-dingfan fw" href="#">微信订饭</a>
+                <a class="logo" href="/"></a>
+                <div class="search">
+                <img class="search-icon" src="/images/icon_search.png" width="20" height="20">
+                <input id="search-input" class="search-input" type="text" placeholder="请输入地点" onkeypress="onKeySearch()">
+                <span id="search-del" class="search-del">&times;</span>
+                </div>
+                <div class="clear"></div>
+            </div>
+            <div class="header-right fr">
+                <div class="login fl">
+
+                    <span class="header-operater">
+                    <a href="/index.html">首页</a>
+                    <a href="/account/order.php">我的订单</a>
+                    <a>联系我们</a>
+                    </span>
+                    <a id="header-login" class="navBtn f-radius f-select n" data-reveal-id="myModal" data-animation="fade">
+                    登录
+                    </a>
+                </div>
+                <div id="cart" class="cart fr">
+                    <img class="cart-icon" src="images/icon_cart_22_22.png">
+                </div>
+                <div id="user" class="user fr n">
+                    <img class="user-icon" src="images/icon_my.png">
+                </div>
+            </div>
+        </div>
+        <!--内容部分-->
     <div class="shop-content">
 
         <div class="gonggao-wrap">
@@ -938,7 +971,27 @@
                 <dd id="i6" class="leftmenu-item"><a href="#">饮品</a></dd>
             </dl>
         </div>
-        <?php require_once 'layouts/shop_cart.php'; ?>
+        <div class="shop-cart shadow n">
+                <div class="shop-head">
+                    购物车<a class="shop-clear">[清空]</a>
+                </div>
+                <div class="shop-body">
+
+
+                    <div class="isnull">
+                        <span></span>
+                        <b>购物车空空如也</b>
+                    </div>
+                </div>
+                <div class="shop-bottom">
+                    <div class="bottom-price fl">总计：￥<label>32</label>
+                    </div>
+                    <div class="bottom-icon"></div>
+                    <div class="bottom-pay fr">
+                        <a id="cart-pay">结算</a>
+                    </div>
+                </div>
+        </div>
         <ul id="subnav" class="subnav subnav-shadow n">
             <li><a href="account/setting.php" target=""><?php echo $langs['account_settings']; ?></a></li>
             <li><a href="account/order.php" target=""><?php echo $langs['my_order']; ?></a></li>
