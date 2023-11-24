@@ -20,6 +20,11 @@
                 <a href="/index.php"><?php echo $langs['home_page']; ?></a>
                 <a href="/account/order"><?php echo $langs['my_order']; ?></a>
                 <a href="/about.php?p=lianxiwomen"><?php echo $langs['contact_us']; ?></a>
+                <select class="form-select" id="languages" aria-label="Default select example">
+                    <option value="vi" <?php if (isset($_SESSION['lang']) && $_SESSION['lang'] == 'vi' ) { echo 'selected'; } if (!isset($_SESSION['lang'])) { echo 'selected'; }?>>Vietnamese</option>
+                    <option value="cn" <?php if (isset($_SESSION['lang']) && $_SESSION['lang'] == 'cn' ) { echo 'selected'; } ?>>Chinese</option>
+                    <option value="en" <?php if (isset($_SESSION['lang']) && $_SESSION['lang'] == 'en' ) { echo 'selected'; } ?>>English</option>
+                </select>
             </span>
             <a id="header-login" class="navBtn f-radius f-select n" data-reveal-id="myModal" data-animation="fade">
                 <?php echo $langs['login']; ?>
@@ -42,3 +47,22 @@
     </ul>
 </div>
 <!--内容部分-->
+<script>
+    document.getElementById('languages').addEventListener('change', function() {
+        var selectedLanguage = this.value;
+
+        // Gửi yêu cầu Ajax để set session cho biến Lang trong PHP
+        var xhr = new XMLHttpRequest();
+        xhr.open('POST', 'set_session_languges.php', true);
+        xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+        xhr.onreadystatechange = function() {
+            if (xhr.readyState === 4 && xhr.status === 200) {
+                // Xử lý phản hồi từ máy chủ (nếu cần)
+                var response = JSON.parse(xhr.responseText);
+                console.log(response);
+            }
+        };
+        xhr.send('language=' + selectedLanguage);
+        location.reload();
+    });
+</script>

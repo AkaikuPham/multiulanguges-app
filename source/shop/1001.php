@@ -162,7 +162,39 @@ include('check_lang.php');
         </div>
 
     </div>
-    <?php require_once 'layouts/header.php'; ?>
+    <!--header部分-->
+    <div class="header shadow">
+            <div class="header-left fl">
+                <div class="icon fl"></div>
+                <a class="weixin-dingfan fw" href="#">微信订饭</a>
+                <a class="logo" href="/"></a>
+                <div class="search">
+                <img class="search-icon" src="/images/icon_search.png" width="22" height="22">
+                <input class="search-input" type="text" placeholder="请输入楼名">
+                </div>
+                <div class="clear"></div>
+            </div>
+            <div class="header-right fr">
+                <div class="login fl">
+
+                    <span class="header-operater">
+                    <a>外卖</a>
+                    <a href="/account/order.php">我的订单</a>
+                    <a>联系我们</a> 
+                    </span> 
+                    <a id="header-login" class="navBtn f-radius f-select n" data-reveal-id="myModal" data-animation="fade">
+                    登录
+                    </a>
+                </div>
+                <div id="cart" class="cart fr"> 
+                    <img class="cart-icon" src="/images/icon_cart_22_22.png">
+                </div>
+                <div id="user" class="user fr n">
+                    <img class="user-icon" src="/images/icon_my.png"> 
+                </div> 
+            </div> 
+        </div>
+        <!--内容部分-->
     <div class="shop-content">
 
         <div class="gonggao-wrap">
@@ -185,7 +217,27 @@ include('check_lang.php');
 
             </dl>
         </div>
-        <?php require_once 'layouts/shop_cart.php'; ?>
+        <div class="shop-cart shadow n">
+                <div class="shop-head">
+                    购物车<a class="shop-clear">[清空]</a>
+                </div>
+                <div class="shop-body">    
+                    
+
+                    <div class="isnull">
+                        <span></span>
+                        <b>购物车空空如也</b>
+                    </div>
+                </div>
+                <div class="shop-bottom">
+                    <div class="bottom-price fl">总计：￥<label>32</label>
+                    </div>
+                    <div class="bottom-icon"></div>
+                    <div class="bottom-pay fr">
+                        <a id="cart-pay">结算</a>
+                    </div>
+                </div>
+        </div>
         <ul id="subnav" class="subnav subnav-shadow n">
             <li><a href="/account/setting.php" target=""><?php echo $langs['account_settings']; ?></a></li>
             <li><a href="/account/order.php" target=""><?php echo $langs['my_order']; ?></a></li>
@@ -196,7 +248,120 @@ include('check_lang.php');
         </ul>
     </div>
 
-    <?php require_once 'layouts/my_modal.php'; ?>
+    <div id="myModal" class="reveal-modal"> 
+        <div id="loginform" class="loginform n">
+            <div>
+                <div class="loginformfield">
+                    <span class="form-icon"><img src="/images/logo-50-50.jpg"></span>
+                </div>
+                <div class="loginformfield">
+                    <span class="form-title">
+                    <h2>使用手机号登录订饭组</h2>
+                    </span>
+                </div>
+                <div class="loginformfield">
+                    <label class="field-name">手机号:</label>
+                    <input id="phone-1" placeholder="请输入您的手机号">
+                    <div class="loginformfield-hint form-error">
+                        <span id="login-phone-error"></span>
+                    </div>
+                </div>
+                <div class="loginformfield">
+                    <label class="field-name">密码:</label>
+                    <span class="fp"><a href="#" id="forget-password" class="forget-password">忘记密码？</a></span>
+                    <input id="login-pwd" type="password" placeholder="密码">
+                    <div class="loginformfield-hint form-error">
+                        <span id="login-pwd-error"></span>
+                    </div>
+                </div> 
+            </div>
+            <div class="loginform-buttons">
+                <a id="checkin" class="save-btn" href="#">登录</a>
+                <span >还没有账号？<a id="register">创建一个</a></span>
+            </div> 
+        </div>
+        <div id="registerform" class="registerform n">
+            <div>
+                <div class="loginformfield">
+                    <span class="form-icon"><img src="/images/logo-50-50.jpg"></span>
+                </div>
+                <div class="loginformfield">
+                    <span class="form-title">
+                    <h2>创建新账号</h2>
+                    </span>
+                </div>
+                <div class="loginformfield">
+                    <label class="field-name">手机号:</label>
+                    <input id="phone-2" placeholder="请输入您的手机号">
+                    <div class="loginformfield-hint form-error">
+                        <span id="register-phone-error"></span>
+                    </div>
+                </div>
+                <div class="loginformfield field-confirm-code">
+                    <label class="field-name">验证码:</label> 
+                    <input   id="register-confirm-code" placeholder="请输入验证码">
+                    <button id="register-code" class="phone-code-btn">获取验证码</button>
+                    <input type="hidden" id="register-hid-code">
+                    <div class="loginformfield-code-hint form-error">
+                        <span id="register-code-error"></span>
+                    </div>
+                </div> 
+                <div class="loginformfield">
+                    <label class="field-name">请输入密码:</label> 
+                    <input id="register-pwd" type="password" placeholder="请输入6位以上字母或数字密码">
+                    <div class="loginformfield-hint form-error">
+                        <span id="register-pwd-error"></span>
+                    </div>
+                </div> 
+            </div>
+            <div class="loginform-buttons">
+                <a id="create" class="save-btn" href="#">创建</a>
+                <span >已经有账号？<a id="login">登录</a></span>
+            </div> 
+        </div>
+        <div id="chpwdform" class="chpwdform n">
+            <div>
+                <div class="loginformfield">
+                    <span class="form-icon"><img src="/images/logo-50-50.jpg"></span>
+                </div>
+                <div class="loginformfield">
+                    <span class="form-title">
+                    <h2>修改密码</h2>
+                    </span>
+                </div>
+                <div class="loginformfield">
+                    <label class="field-name">手机号:</label>
+                    <input id="phone-3" placeholder="请输入您的手机号">
+                    <div class="loginformfield-hint form-error">
+                        <span id="chpwd-phone-error"></span>
+                    </div>
+                </div>
+                <div class="loginformfield field-confirm-code">
+                    <label class="field-name">验证码:</label> 
+                    <input  id="chpwd-confirm-code"  placeholder="请输入验证码">
+                    <button id="chpwd-code" class="phone-code-btn">获取验证码</button>
+                    <input type="hidden" id="chpwd-hid-code">
+                    <div class="loginformfield-code-hint form-error">
+                        <span id="chpwd-code-error"></span>
+                    </div>
+                </div> 
+                <div class="loginformfield">
+                    <label class="field-name">新密码:</label> 
+                    <input id="chpwd-pwd" type="password" placeholder="请输入6位以上字母或数字密码">
+                    <div class="loginformfield-hint form-error">
+                        <span id="chpwd-pwd-error"></span>
+                    </div>
+                </div> 
+            </div>
+            <div class="loginform-buttons">
+                <a id="chpwd" class="save-btn" href="#">确定</a>
+                <span >没有忘记密码？<a id="back-login">返回</a></span>
+            </div> 
+        </div>
+
+
+        <a class="close-reveal-modal"><img src="/images/icon_close.png" height="24" width="24"></a>
+    </div>
 
     <script src="/scripts/md5.js"></script>
     <script src="/scripts/myInfo.js"></script>
