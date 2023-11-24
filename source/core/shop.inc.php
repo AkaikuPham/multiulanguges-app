@@ -1,4 +1,7 @@
 <?php 
+
+include('../check_lang.php');
+
 /**
  * 添加店铺
  * @return string
@@ -76,9 +79,10 @@ function editShop($shopId){
 }
 
 function delShop($shopId){
+    global $langs;
     $row=checkProExistByShopId($shopId);
     if($row){
-        $mes="该店铺下还有商品，不能删除!<a href='listShop.php' target='mainFrame'>返回</a>";
+        $mes="该店铺下还有商品，不能删除!<a href='listShop.php' target='mainFrame'>" . $langs['return'] . "</a>";
         return $mes;
     }
     $where="shopId=".$shopId;

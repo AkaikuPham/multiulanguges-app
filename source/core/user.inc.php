@@ -1,5 +1,9 @@
 <?php 
+
+include('../check_lang.php');
+
 function reg(){
+	global $langs;
 	$arr=$_POST;
 	$arr['password']=md5($_POST['password']);
 	$arr['regTime']=time();
@@ -19,11 +23,12 @@ function reg(){
 		if(file_exists($filename)){
 			unlink($filename);
 		}
-		$mes="注册失败!<br/><a href='reg.php'>重新注册</a>|<a href='index.php'>查看首页</a>";
+		$mes = "注册失败!<br/><a href='reg.php'>" . $langs['register_again'] . "</a>|<a href='index.php'>" . $langs['view_home_page'] . "</a>";
 	}
 	return $mes;
 }
 function login(){
+	global $langs;
 	$username=$_POST['username'];
 	//addslashes():使用反斜线引用特殊字符
 	//$username=addslashes($username);
@@ -36,7 +41,7 @@ function login(){
 	if($row){
 		$_SESSION['loginFlag']=$row['id'];
 		$_SESSION['username']=$row['username'];
-		$mes="登陆成功！<br/>3秒钟后跳转到首页<meta http-equiv='refresh' content='3;url=index.php'/>";
+		$mes = "登陆成功！<br/>" . $langs['homepage_after3'] . "<meta http-equiv='refresh' content='3;url=index.php'/>";
 	}else{
 		$mes="登陆失败！<a href='login.php'>重新登陆</a>";
 	}

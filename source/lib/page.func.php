@@ -1,9 +1,12 @@
-<?php 
+<?php
+
+include('../check_lang.php');
 
 function showPage($page,$totalPage,$where=null,$sep="&nbsp;"){
+	global $langs;
 	$where=($where==null)?null:"&".$where;
 	$url = $_SERVER ['PHP_SELF'];
-	$index = ($page == 1) ? "首页" : "<a class='page-first' href='{$url}?page=1{$where}'>首页</a>";
+	$index = ($page == 1) ? $langs['home_page'] : "<a class='page-first' href='{$url}?page=1{$where}'>" . $langs['home_page'] . "</a>";
 	$last = ($page == $totalPage) ? "尾页" : "<a class='page-end' href='{$url}?page={$totalPage}{$where}'>尾页</a>";
 	$prevPage=($page>=1)?$page-1:1;
 	$nextPage=($Page>=$totalPage)?$totalPage:$page+1;

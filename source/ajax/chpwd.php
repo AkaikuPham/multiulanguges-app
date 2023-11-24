@@ -9,7 +9,7 @@ $pwd=md5($_POST['password']);
 if($username==""){
     $obj = new stdClass();
     $obj->code="1";
-    $obj->msg=urlencode("手机号不能为空");//中文urlencode一下
+    $obj->msg=urlencode($langs['phone_not_empty']);//中文urlencode一下
     echo urldecode(json_encode($obj));
     return;
 }

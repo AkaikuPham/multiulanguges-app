@@ -36,7 +36,7 @@
                         <span class="left-icon">
                             <img src="/images/icon_order.png" width="18px" height="18px">
                         </span>
-                        <a href="order">我的订单</a>
+                        <a href="order"><?php echo $langs['my_order']; ?></a>
                     </dd>
                     <dd class="menu-item">
                         <span class="left-icon">
@@ -48,13 +48,13 @@
                         <span class="left-icon">
                             <img src="/images/icon_score.png" width="18px" height="18px">
                         </span>
-                        <a href="score">我的积分</a>
+                        <a href="score"><?php echo $langs['my_scores']; ?></a>
                     </dd>
                     <dd class="menu-item">
                         <span class="left-icon">
                             <img src="/images/icon_balance.png" width="18px" height="18px">
                         </span>
-                        <a href="balance">我的余额</a>
+                        <a href="balance"><?php echo $langs['my_balance']; ?></a>
                     </dd>
                     <dd class="menu-item active">
                         <span class="left-icon">
@@ -82,14 +82,14 @@
                         </div>
                     </div>
                     <div class="accountformfield phonefield">
-                        <label>手机号</label><span id="pn"></span>
+                        <label><?php echo $langs['phonenumber']; ?></label><span id="pn"></span>
                         <div class="accountformfield-hint">
                             <span></span>
                         </div>
                     </div>
                     <div class="accountformfield passwordfield">
-                        <label>密码</label><span>******</span>
-                        <button id="btn-update-pwd">修改密码</button>
+                        <label><?php echo $langs['password']; ?></label><span>******</span>
+                        <button id="btn-update-pwd"><?php echo $langs['change_pass']; ?></button>
                         <div class="accountformfield-hint">
                             <span></span>
                         </div>
@@ -115,7 +115,7 @@
                         </div>
                     </div>
                     <div class="accountformfield">
-                        <label>新密码</label><input id="pwd2" placeholder="">
+                        <label><?php echo $langs['new_pass']; ?></label><input id="pwd2" placeholder="">
                         <div class="accountformfield-hint form-error">
                             <span id="error-pwd2"></span>
                         </div>
@@ -154,22 +154,22 @@
     <script src="/scripts/myInfo.js"></script>
     <script src="/scripts/footer.js"></script>
     <script type="text/javascript">
-        $(function () {
+        $(function() {
             initSettings();
 
             //修改密码
-            $("#btn-update-pwd").click(function (event) {
+            $("#btn-update-pwd").click(function(event) {
                 $("#form-settings").hide();
                 $("#form-pwd").show();
             });
 
             //保存设置
-            $("#save-settings").click(function (event) {
+            $("#save-settings").click(function(event) {
                 saveSettings();
             });
 
             //保存新密码
-            $("#save-new-pwd").click(function (event) {
+            $("#save-new-pwd").click(function(event) {
                 saveNewPwd();
             });
 
@@ -203,13 +203,12 @@
                 return;
             }
             var postUrl = "/ajax/saveSettings.php";
-            $.post(postUrl,
-                {
+            $.post(postUrl, {
                     username: username,
                     name: name,
                     email: email
                 },
-                function (data, status, xhr) {
+                function(data, status, xhr) {
                     if (status == "success") {
                         $res = $.parseJSON(data);
                         if ($res.code == "0") {
@@ -247,13 +246,12 @@
             }
 
             var postUrl = "/ajax/saveNewPwd.php";
-            $.post(postUrl,
-                {
+            $.post(postUrl, {
                     username: username,
                     pwd: pwd,
                     pwd2: pwd2
                 },
-                function (data, status, xhr) {
+                function(data, status, xhr) {
                     if (status == "success") {
                         var res = $.parseJSON(data);
                         if (res.code == "0") {

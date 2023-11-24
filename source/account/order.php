@@ -56,7 +56,7 @@ if (!$rows) {
                         <span class="left-icon">
                             <img src="/images/icon_order.png" width="18px" height="18px">
                         </span>
-                        <a href="order">我的订单</a>
+                        <a href="order"><?php echo $langs['my_order']; ?></a>
                     </dd>
                     <dd class="menu-item">
                         <span class="left-icon">
@@ -68,13 +68,13 @@ if (!$rows) {
                         <span class="left-icon">
                             <img src="/images/icon_score.png" width="18px" height="18px">
                         </span>
-                        <a href="score">我的积分</a>
+                        <a href="score"><?php echo $langs['my_scores']; ?></a>
                     </dd>
                     <dd class="menu-item">
                         <span class="left-icon">
                             <img src="/images/icon_balance.png" width="18px" height="18px">
                         </span>
-                        <a href="balance">我的余额</a>
+                        <a href="balance"><?php echo $langs['my_balance']; ?></a>
                     </dd>
                     <dd class="menu-item ">
                         <span class="left-icon">

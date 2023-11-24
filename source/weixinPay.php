@@ -24,11 +24,11 @@
         </div>
         <div class="header-left fl">
             <div class="icon fl"></div>
-            <a class="weixin-dingfan fw" href="#">微信订饭</a>
+            <a class="weixin-dingfan fw" href="#"><?php echo $langs['wechat_meal_ordering'] ?></a>
             <a class="logo" href="/"></a>
             <div class="search">
                 <img class="search-icon" src="/images/icon_search.png" width="22" height="22">
-                <input class="search-input" type="text" placeholder="请输入地点" onkeypress="onKeySearch()">
+                <input class="search-input" type="text" placeholder="<?php echo $langs['please_enter_location'] ?>" onkeypress="onKeySearch()">
             </div>
             <div class="clear"></div>
         </div>
@@ -36,12 +36,12 @@
             <div class="login fl">
 
                 <span class="header-operater">
-                    <a href="/">首页</a>
-                    <a href="/account/order">我的订单</a>
-                    <a href="/about.php?p=lianxiwomen">联系我们</a>
+                    <a href="/"><?php echo $langs['home_page']; ?></a>
+                    <a href="/account/order"><?php echo $langs['my_order']; ?></a>
+                    <a href="/about.php?p=lianxiwomen"><?php echo $langs['contact_us']; ?></a>
                 </span>
                 <a id="header-login" class="navBtn f-radius f-select n" data-reveal-id="myModal" data-animation="fade">
-                    登录
+                    <?php echo $langs['login']; ?>
                 </a>
             </div>
             <div id="cart" class="cart fr">
