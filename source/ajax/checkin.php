@@ -10,7 +10,7 @@ $pwd=md5($_POST['password']);
 if($username==""){
     $obj = new stdClass();
     $obj->code="1";
-    $obj->msg=urlencode("手机号不能为空");//中文urlencode一下
+    $obj->msg=urlencode($langs['phone_not_empty']);//中文urlencode一下
     echo urldecode(json_encode($obj));
     return;
 }
@@ -34,7 +34,7 @@ if($row){
     $_SESSION['userId']=$username;
     $obj = new stdClass();
     $obj->code="0";
-    $obj->msg=urlencode("登录成功");//中文urlencode一下
+    $obj->msg=urlencode($langs['login_successful']);//中文urlencode一下
     echo urldecode(json_encode($obj)); 
 }else{
     $obj = new stdClass();

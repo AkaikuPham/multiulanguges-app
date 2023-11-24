@@ -3,7 +3,7 @@
 
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <meta name="description" content="“订饭组（）”是北京地区知名的在线外卖订餐O2O平台，是写字楼白领专属订餐网站。已覆盖北京数百个写字楼，数十万用户，聚集了数千家餐饮商户。订外卖，找订饭组。" />
+    <meta name="description" content=<?php echo $langs['meta_description'] ?> />
     <script src="/scripts/jquery-1.8.3.js"></script>
     <script src="/scripts/jquery.reveal.js"></script>
     <script src="/scripts/jquery.cookie.js"></script>
@@ -940,12 +940,12 @@
         </div>
         <?php require_once 'layouts/shop_cart.php'; ?>
         <ul id="subnav" class="subnav subnav-shadow n">
-            <li><a href="account/setting.php" target="">账号设置</a></li>
-            <li><a href="account/order.php" target="">我的订单</a></li>
-            <li><a href="account/balance.php" target="">我的余额</a></li>
+            <li><a href="account/setting.php" target=""><?php echo $langs['account_settings']; ?></a></li>
+            <li><a href="account/order.php" target=""><?php echo $langs['my_order']; ?></a></li>
+            <li><a href="account/balance.php" target=""><?php echo $langs['my_balance']; ?></a></li>
             <li><a href="account/cash.php" target="">代金券</a></li>
-            <li><a href="account/balance.php" target="">我的地址</a></li>
-            <li><a id="sub-logout" href="" target="">退出</a></li>
+            <li><a href="account/balance.php" target=""><?php echo $langs['my_address']; ?></a></li>
+            <li><a id="sub-logout" href="" target=""><?php echo $langs['logout']; ?></a></li>
         </ul>
     </div>
 

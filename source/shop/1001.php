@@ -33,8 +33,7 @@
         <div id='m1' class='menu-wrap '>
             <div class='menu-item' item-id='1685431107987'>
                 <div class='item-wrap'><img src='/image_220/1685431107987.jpg' height='130' width='130'>
-                    <div class='item-detail'><span class='name '>西红柿炒鸡蛋</span><span class='price'
-                            item-price='11'>￥11</span> <img class='buy' src='/images/icon_buy.png'>
+                    <div class='item-detail'><span class='name '>西红柿炒鸡蛋</span><span class='price' item-price='11'>￥11</span> <img class='buy' src='/images/icon_buy.png'>
                         <ul class='stars'>
                             <li data-value='1' class='active'></li>
                             <li data-value='2' class='active'></li>
@@ -47,8 +46,7 @@
             </div>
             <div class='menu-item' item-id='1685438174300'>
                 <div class='item-wrap'><img src='/image_220/1685438174300.jpg' height='130' width='130'>
-                    <div class='item-detail'><span class='name '>烤羊肉串</span><span class='price'
-                            item-price='11'>￥11</span> <img class='buy' src='/images/icon_buy.png'>
+                    <div class='item-detail'><span class='name '>烤羊肉串</span><span class='price' item-price='11'>￥11</span> <img class='buy' src='/images/icon_buy.png'>
                         <ul class='stars'>
                             <li data-value='1' class='active'></li>
                             <li data-value='2' class='active'></li>
@@ -61,8 +59,7 @@
             </div>
             <div class='menu-item' item-id='1685438210408'>
                 <div class='item-wrap'><img src='/image_220/1685438210408.jpg' height='130' width='130'>
-                    <div class='item-detail'><span class='name '>白菜豆腐</span><span class='price'
-                            item-price='43'>￥43</span> <img class='buy' src='/images/icon_buy.png'>
+                    <div class='item-detail'><span class='name '>白菜豆腐</span><span class='price' item-price='43'>￥43</span> <img class='buy' src='/images/icon_buy.png'>
                         <ul class='stars'>
                             <li data-value='1' class='active'></li>
                             <li data-value='2' class='active'></li>
@@ -75,8 +72,7 @@
             </div>
             <div class='menu-item' item-id='1685438241121'>
                 <div class='item-wrap'><img src='/image_220/1685438241121.jpg' height='130' width='130'>
-                    <div class='item-detail'><span class='name '>西兰花炒鸡蛋</span><span class='price'
-                            item-price='54'>￥54</span> <img class='buy' src='/images/icon_buy.png'>
+                    <div class='item-detail'><span class='name '>西兰花炒鸡蛋</span><span class='price' item-price='54'>￥54</span> <img class='buy' src='/images/icon_buy.png'>
                         <ul class='stars'>
                             <li data-value='1' class='active'></li>
                             <li data-value='2' class='active'></li>
@@ -89,8 +85,7 @@
             </div>
             <div class='menu-item' item-id='1685438368616'>
                 <div class='item-wrap'><img src='/image_220/1685438368616.jpg' height='130' width='130'>
-                    <div class='item-detail'><span class='name '>测试菜品</span><span class='price'
-                            item-price='32'>￥32</span> <img class='buy' src='/images/icon_buy.png'>
+                    <div class='item-detail'><span class='name '>测试菜品</span><span class='price' item-price='32'>￥32</span> <img class='buy' src='/images/icon_buy.png'>
                         <ul class='stars'>
                             <li data-value='1' class='active'></li>
                             <li data-value='2' class='active'></li>
@@ -103,8 +98,7 @@
             </div>
             <div class='menu-item' item-id='1685438381267'>
                 <div class='item-wrap'><img src='/image_220/1685438381267.jpg' height='130' width='130'>
-                    <div class='item-detail'><span class='name '>测试21</span><span class='price'
-                            item-price='32'>￥32</span> <img class='buy' src='/images/icon_buy.png'>
+                    <div class='item-detail'><span class='name '>测试21</span><span class='price' item-price='32'>￥32</span> <img class='buy' src='/images/icon_buy.png'>
                         <ul class='stars'>
                             <li data-value='1' class='active'></li>
                             <li data-value='2' class='active'></li>
@@ -119,8 +113,7 @@
         <div id='m2' class='menu-wrap n'>
             <div class='menu-item' item-id='1685438145553'>
                 <div class='item-wrap'><img src='/image_220/1685438145553.jpg' height='130' width='130'>
-                    <div class='item-detail'><span class='name '>西红柿炒黄瓜</span><span class='price'
-                            item-price='43'>￥43</span> <img class='buy' src='/images/icon_buy.png'>
+                    <div class='item-detail'><span class='name '>西红柿炒黄瓜</span><span class='price' item-price='43'>￥43</span> <img class='buy' src='/images/icon_buy.png'>
                         <ul class='stars'>
                             <li data-value='1' class='active'></li>
                             <li data-value='2' class='active'></li>
@@ -135,8 +128,7 @@
         <div id='m3' class='menu-wrap n'>
             <div class='menu-item' item-id='1685438292728'>
                 <div class='item-wrap'><img src='/image_220/1685438292728.jpg' height='130' width='130'>
-                    <div class='item-detail'><span class='name '>鸡蛋汤</span><span class='price'
-                            item-price='12'>￥12</span> <img class='buy' src='/images/icon_buy.png'>
+                    <div class='item-detail'><span class='name '>鸡蛋汤</span><span class='price' item-price='12'>￥12</span> <img class='buy' src='/images/icon_buy.png'>
                         <ul class='stars'>
                             <li data-value='1' class='active'></li>
                             <li data-value='2' class='active'></li>
@@ -179,9 +171,7 @@
         <div class="leftmenu">
             <dl>
                 <dt>
-                    <img class='shop-icon' src='/image_shop/1001.jpg'><span class='shop-name' shopId='1001'
-                        shopName='湖北大厦' shopPhone='13599999999'>湖北大厦</span><span class='switch-address'><a
-                            class='switch-address' href='/index.php'>[切换地址]</a></span>
+                    <img class='shop-icon' src='/image_shop/1001.jpg'><span class='shop-name' shopId='1001' shopName='湖北大厦' shopPhone='13599999999'>湖北大厦</span><span class='switch-address'><a class='switch-address' href='/index.php'>[切换地址]</a></span>
 
                 </dt>
                 <dd id='i1' class='active leftmenu-item'><a href='#'>鲁菜</a></dd>
@@ -193,12 +183,12 @@
         </div>
         <?php require_once 'layouts/shop_cart.php'; ?>
         <ul id="subnav" class="subnav subnav-shadow n">
-            <li><a href="/account/setting.php" target="">账号设置</a></li>
-            <li><a href="/account/order.php" target="">我的订单</a></li>
-            <li><a href="/account/balance.php" target="">我的余额</a></li>
+            <li><a href="/account/setting.php" target=""><?php echo $langs['account_settings']; ?></a></li>
+            <li><a href="/account/order.php" target=""><?php echo $langs['my_order']; ?></a></li>
+            <li><a href="/account/balance.php" target=""><?php echo $langs['my_balance']; ?></a></li>
             <li><a href="/account/cash.php" target="">代金券</a></li>
-            <li><a href="/account/balance.php" target="">我的地址</a></li>
-            <li><a id="sub-logout" href="" target="">退出</a></li>
+            <li><a href="/account/balance.php" target=""><?php echo $langs['my_address']; ?></a></li>
+            <li><a id="sub-logout" href="" target=""><?php echo $langs['logout']; ?></a></li>
         </ul>
     </div>
 
@@ -213,12 +203,15 @@
     <script src="/scripts/header.js"></script>
     <script src="/scripts/shop.js"></script>
     <script type="text/javascript">
-        $(function () {
+        $(function() {
             //存商家信息到cookie
             var shopId = $('.shop-name').attr('shopId');
             var shopName = $('.shop-name').attr('shopName');
             var shopPhone = $('.shop-name').attr('shopPhone');
-            $.cookie('shopId', shopId, { expires: 365, path: '/' });//写cookie
+            $.cookie('shopId', shopId, {
+                expires: 365,
+                path: '/'
+            }); //写cookie
             //初始化购物车
             initCart();
             $('.shop-cart').show();
@@ -242,7 +235,7 @@
 
 
             //监听窗口尺寸
-            $(window).resize(function () {
+            $(window).resize(function() {
                 //设置左侧的高
                 var zh = $(window).height();
                 var leftHeight = zh - 55;
@@ -261,7 +254,7 @@
 
 
             //左侧点击
-            $('.leftmenu-item a').click(function () {
+            $('.leftmenu-item a').click(function() {
                 //变样式
                 $(this).parents('.leftmenu').find('.leftmenu-item').removeClass('active');
                 $(this).parent().addClass('active');
@@ -303,8 +296,7 @@
                         $(".price").css('right', 50);
                         $(".buy").css('right', 10);
                     }
-                }
-                else if (mw < 700) {
+                } else if (mw < 700) {
                     percent = '96%';
                     marginLeft = mw - mw * 0.96;
 
@@ -345,8 +337,6 @@
 
 
         });
-
-
     </script>
 </body>
 

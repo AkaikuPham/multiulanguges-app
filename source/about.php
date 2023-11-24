@@ -42,11 +42,11 @@
         <div class="about-nav">
             <div class="nav">
                 <ul>
-                    <li><a forward="guanyuwomen" class="static">关于我们</a></li>
-                    <li><a forward="lianxiwomen" class="static">联系我们</a></li>
-                    <li><a forward="tousujianyi" class="static">投诉建议</a></li>
+                    <li><a forward="guanyuwomen" class="static"><?php echo $langs['about_us']; ?></a></li>
+                    <li><a forward="lianxiwomen" class="static"><?php echo $langs['contact_us']; ?></a></li>
+                    <li><a forward="tousujianyi" class="static"><?php echo $langs['suggestion']; ?></a></li>
                     <li><a forward="jiaruwomen" class="static">加入我们</a></li>
-                    <li><a forward="shangjiaruzhu" class="static">商家入驻</a></li>
+                    <li><a forward="shangjiaruzhu" class="static"><?php echo $langs['merchants_settle_in']; ?></a></li>
                 </ul>
             </div>
         </div>
@@ -79,7 +79,7 @@
             <!--联系我们-->
             <div id="lianxiwomen" class="body-wrap n">
                 <div class="body-header">
-                    <span>联系我们</span>
+                    <span><?php echo $langs['contact_us']; ?></span>
                 </div>
                 <div class="body-content">
                     <span class="bft">
@@ -92,7 +92,7 @@
             <!--投诉建议-->
             <div id="tousujianyi" class="body-wrap n">
                 <div class="body-header">
-                    <span>投诉建议</span>
+                    <span><?php echo $langs['suggestion']; ?></span>
                 </div>
                 <div class="body-content">
                     <span class="bft">任何问题和建议，可以告诉我们哦~</span>
@@ -116,7 +116,7 @@
             <!--商家入驻-->
             <div id="shangjiaruzhu" class="body-wrap n">
                 <div class="body-header">
-                    <span>商家入驻</span>
+                    <span><?php echo $langs['merchants_settle_in']; ?></span>
                 </div>
                 <div class="body-content">
                     <span class="bft">您好，订饭组正在需要寻找更多的外卖店，他需要味道好，服务好，干净卫生，价格合理，当然最好是中式快餐哦，如果您有合适的餐馆推荐，一定要告诉我们哦~我们会去沟通考察。</span>

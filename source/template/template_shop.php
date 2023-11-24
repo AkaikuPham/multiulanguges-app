@@ -52,32 +52,32 @@
         </div>
         <div class="shop-cart shadow n">
             <div class="shop-head">
-                购物车<a class="shop-clear">[清空]</a>
+                <?php echo $langs['shopping_cart']; ?><a class="shop-clear"><?php echo $langs['clear']; ?></a>
             </div>
             <div class="shop-body">
 
 
                 <div class="isnull">
                     <span></span>
-                    <b>购物车空空如也</b>
+                    <b><?php echo $langs['shopping_cart_is_empty']; ?></b>
                 </div>
             </div>
             <div class="shop-bottom">
-                <div class="bottom-price fl">总计：￥<label>32</label>
+                <div class="bottom-price fl"><?php echo $langs['total']; ?>：￥<label>32</label>
                 </div>
                 <div class="bottom-icon"></div>
                 <div class="bottom-pay fr">
-                    <a id="cart-pay">结算</a>
+                    <a id="cart-pay"><?php echo $langs['settlement']; ?></a>
                 </div>
             </div>
         </div>
         <ul id="subnav" class="subnav subnav-shadow n">
-            <li><a href="/account/setting.php" target="">账号设置</a></li>
-            <li><a href="/account/order.php" target="">我的订单</a></li>
-            <li><a href="/account/balance.php" target="">我的余额</a></li>
+            <li><a href="/account/setting.php" target=""><?php echo $langs['account_settings']; ?></a></li>
+            <li><a href="/account/order.php" target=""><?php echo $langs['my_order']; ?></a></li>
+            <li><a href="/account/balance.php" target=""><?php echo $langs['my_balance']; ?></a></li>
             <li><a href="/account/cash.php" target="">代金券</a></li>
-            <li><a href="/account/balance.php" target="">我的地址</a></li>
-            <li><a id="sub-logout" href="" target="">退出</a></li>
+            <li><a href="/account/balance.php" target=""><?php echo $langs['my_address']; ?></a></li>
+            <li><a id="sub-logout" href="" target=""><?php echo $langs['logout']; ?></a></li>
         </ul>
     </div>
 

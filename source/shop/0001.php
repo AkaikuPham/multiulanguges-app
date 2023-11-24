@@ -3,8 +3,7 @@
 
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <meta name="description"
-        content="“订饭组（dingfanzu.com）”是北京地区知名的在线外卖订餐O2O平台，是写字楼白领专属订餐网站。已覆盖北京数百个写字楼，数十万用户，聚集了数千家餐饮商户。订外卖，找订饭组。" />
+    <meta name="description" content="“订饭组（dingfanzu.com）”是北京地区知名的在线外卖订餐O2O平台，是写字楼白领专属订餐网站。已覆盖北京数百个写字楼，数十万用户，聚集了数千家餐饮商户。订外卖，找订饭组。" />
     <script src="/scripts/jquery-1.8.3.js"></script>
     <script src="/scripts/jquery.reveal.js"></script>
     <script src="/scripts/jquery.cookie.js"></script>
@@ -71,12 +70,12 @@
         </div>
         <?php require_once 'layouts/shop_cart.php'; ?>
         <ul id="subnav" class="subnav subnav-shadow n">
-            <li><a href="account/setting.php" target="">账号设置</a></li>
-            <li><a href="account/order.php" target="">我的订单</a></li>
-            <li><a href="account/balance.php" target="">我的余额</a></li>
+            <li><a href="account/setting.php" target=""><?php echo $langs['account_settings']; ?></a></li>
+            <li><a href="account/order.php" target=""><?php echo $langs['my_order']; ?></a></li>
+            <li><a href="account/balance.php" target=""><?php echo $langs['my_balance']; ?></a></li>
             <li><a href="account/cash.php" target="">代金券</a></li>
-            <li><a href="account/balance.php" target="">我的地址</a></li>
-            <li><a id="sub-logout" href="" target="">退出</a></li>
+            <li><a href="account/balance.php" target=""><?php echo $langs['my_address']; ?></a></li>
+            <li><a id="sub-logout" href="" target=""><?php echo $langs['logout']; ?></a></li>
         </ul>
     </div>
 
@@ -91,12 +90,15 @@
     <script src="/scripts/header.js"></script>
     <script src="/scripts/shop.js"></script>
     <script type="text/javascript">
-        $(function () {
+        $(function() {
             //存商家信息到cookie
             var shopId = $('.shop-name').attr('shopId');
             var shopName = $('.shop-name').attr('shopName');
             var shopPhone = $('.shop-name').attr('shopPhone');
-            $.cookie('shopId', shopId, { expires: 365, path: '/' });//写cookie 
+            $.cookie('shopId', shopId, {
+                expires: 365,
+                path: '/'
+            }); //写cookie 
             //初始化购物车
             initCart();
             $('.shop-cart').show();
@@ -120,7 +122,7 @@
 
 
             //监听窗口尺寸
-            $(window).resize(function () {
+            $(window).resize(function() {
                 //设置左侧的高
                 var zh = $(window).height();
                 var leftHeight = zh - 55;
@@ -139,7 +141,7 @@
 
 
             //左侧点击
-            $('.leftmenu-item a').click(function () {
+            $('.leftmenu-item a').click(function() {
                 //变样式
                 $(this).parents('.leftmenu').find('.leftmenu-item').removeClass('active');
                 $(this).parent().addClass('active');
@@ -181,8 +183,7 @@
                         $(".price").css('right', 50);
                         $(".buy").css('right', 10);
                     }
-                }
-                else if (mw < 700) {
+                } else if (mw < 700) {
                     percent = '96%';
                     marginLeft = mw - mw * 0.96;
 
@@ -223,8 +224,6 @@
 
 
         });
-
-
     </script>
 </body>
 

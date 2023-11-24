@@ -13,7 +13,7 @@ $arr2['username']=$_POST['username'];
 if(!isset($arr['username'])||!isset($arr['password'])){
     $obj = new stdClass();
     $obj->code="1";
-    $obj->msg=urlencode("手机号或密码不能为空");//中文urlencode一下
+    $obj->msg=urlencode($langs['phone_or_pass_not_emp']);//中文urlencode一下
     echo urldecode(json_encode($obj));
     return;
 }

@@ -32,10 +32,10 @@
             <div class="menu-left">
                 <dl>
                     <dt>个人中心</dt>
-                    <dd class=""><a href="order">我的订单</a></dd>
+                    <dd class=""><a href="order"><?php echo $langs['my_order']; ?></a></dd>
                     <dd class=""><a href="address">送餐地址</a></dd>
-                    <dd class=""><a href="score">我的积分</a></dd>
-                    <dd class=""><a href="balance">我的余额</a></dd>
+                    <dd class=""><a href="score"><?php echo $langs['my_scores']; ?></a></dd>
+                    <dd class=""><a href="balance"><?php echo $langs['my_balance']; ?></a></dd>
                     <dd class=""><a href="setting">账户设置</a></dd>
                 </dl>
             </div>
@@ -71,7 +71,7 @@
                                 <dd>齐鲁大厦</dd>
                             </dl>
                             <dl class="">
-                                <dt>可用下单手机号：</dt>
+                                <dt><?php echo $langs['available_mobile_pn']; ?></dt>
                                 <dd>13581651534</dd>
                             </dl>
                         </div>
@@ -100,7 +100,7 @@
                                 <dd>齐鲁大厦</dd>
                             </dl>
                             <dl class="clearfix">
-                                <dt>可用下单手机号：</dt>
+                                <dt><?php echo $langs['available_mobile_pn']; ?></dt>
                                 <dd>13581651534</dd>
                             </dl>
                         </div>
@@ -128,7 +128,7 @@
                                 <dd>齐鲁大厦</dd>
                             </dl>
                             <dl class="clearfix">
-                                <dt>可用下单手机号：</dt>
+                                <dt><?php echo $langs['available_mobile_pn']; ?></dt>
                                 <dd>13581651534</dd>
                             </dl>
                         </div>

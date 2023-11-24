@@ -35,7 +35,7 @@
                         <span class="left-icon">
                             <img src="/images/icon_order.png" width="18px" height="18px">
                         </span>
-                        <a href="order">我的订单</a>
+                        <a href="order"><?php echo $langs['my_order']; ?></a>
                     </dd>
                     <dd class="menu-item">
                         <span class="left-icon">
@@ -47,13 +47,13 @@
                         <span class="left-icon">
                             <img src="/images/icon_score.png" width="18px" height="18px">
                         </span>
-                        <a href="score">我的积分</a>
+                        <a href="score"><?php echo $langs['my_scores']; ?></a>
                     </dd>
                     <dd class="menu-item">
                         <span class="left-icon">
                             <img src="/images/icon_balance.png" width="18px" height="18px">
                         </span>
-                        <a href="balance">我的余额</a>
+                        <a href="balance"><?php echo $langs['my_balance']; ?></a>
                     </dd>
                     <dd class="menu-item ">
                         <span class="left-icon">
@@ -67,7 +67,7 @@
         <!--右侧内容-->
         <div class="content-right fl">
             <div class="summary fl">
-                <h3 class="summary-header">我的积分</h3>
+                <h3 class="summary-header"><?php echo $langs['my_scores']; ?></h3>
             </div>
             <div>
                 <div class="account-balance fl">
@@ -95,7 +95,7 @@
     <script src="/scripts/myInfo.js"></script>
     <script src="/scripts/footer.js"></script>
     <script type="text/javascript">
-        $(function () {
+        $(function() {
 
             //初始化积分
             var score = my_GetValue("jifen");

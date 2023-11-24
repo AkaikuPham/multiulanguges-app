@@ -3,7 +3,7 @@
 
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <meta name="description" content="“订饭组（）”是北京地区知名的在线外卖订餐O2O平台，是写字楼白领专属订餐网站。已覆盖北京数百个写字楼，数十万用户，聚集了数千家餐饮商户。订外卖，找订饭组。" />
+    <meta name="description" content=<?php echo $langs['meta_description'] ?> />
     <script src="scripts/jquery-1.8.3.js"></script>
     <script src="scripts/jquery.reveal.js"></script>
     <script src="scripts/jquery.cookie.js"></script>
@@ -30,15 +30,14 @@
     <?php require_once 'layouts/header.php'; ?>
 
     <div class="order-top-info">
-        <span>首页&nbsp;&gt;&nbsp;<a class="info-place"
-                onclick="JavaScript:history.go(-1);"></a>&nbsp;&gt;&nbsp;确认订单</span>
+        <span><?php echo $langs['home_page']; ?>&nbsp;&gt;&nbsp;<a class="info-place" onclick="JavaScript:history.go(-1);"></a>&nbsp;&gt;&nbsp;确认订单</span>
     </div>
 
     <div class="order-confirm-content">
         <div class="checkout-info">
             <div class="checkout-title">
                 <h2>订单信息</h2>
-                <a onclick="JavaScript:history.go(-1);">&lt; 返回购物车修改
+                <a onclick="JavaScript:history.go(-1);">&lt; <?php echo $langs['return_cart_modify']; ?>
                 </a>
             </div>
             <div class="checkout-tablehead">
@@ -81,7 +80,7 @@
             <div class="checkout-select">
                 <h2>我的优惠</h2>
                 <p class="checkout-jifen">
-                    <span class="jifen-label">我的积分：</span>
+                    <span class="jifen-label"><?php echo $langs['my_scores']; ?>：</span>
                     <span class="jifen-value">积分抵现：￥</span>
                 </p>
                 <div class="checkout-daijinjuan">
@@ -124,15 +123,15 @@
                 <label id="error-name" class="error"></label>
             </div>
             <div class="addressformfield">
-                <label class="address-pn">手机号:</label>
-                <input id="address-pn" placeholder="请输入11位手机号" maxlength="11">
+                <label class="address-pn"><?php echo $langs['phonenumber']; ?>:</label>
+                <input id="address-pn" placeholder="<?php echo $langs['placeholder_phone_number']; ?>" maxlength="11">
                 <label id="error-pn" class="error"></label>
             </div>
             <div class="addressformfield">
-                <label class="address-detail">地址:</label>
+                <label class="address-detail"><?php echo $langs['address']; ?>:</label>
                 <div class="detail-2">
                     <span id="place"></span>
-                    <input id="address-detail" placeholder="详细地址(如A座12层)">
+                    <input id="address-detail" placeholder="<?php echo $langs['placeholder_address']; ?>">
                 </div>
                 <label id="error-detail" class="error"></label>
             </div>
@@ -162,7 +161,7 @@
     <script src="scripts/header.js"></script>
     <script src="scripts/footer.js"></script>
     <script type="text/javascript">
-        $(function () {
+        $(function() {
 
 
             $(".footer-content").show();

@@ -36,7 +36,7 @@
                         <span class="left-icon">
                             <img src="/images/icon_order.png" width="18px" height="18px">
                         </span>
-                        <a href="order">我的订单</a>
+                        <a href="order"><?php echo $langs['my_order']; ?></a>
                     </dd>
                     <dd class="menu-item active">
                         <span class="left-icon">
@@ -48,13 +48,13 @@
                         <span class="left-icon">
                             <img src="/images/icon_score.png" width="18px" height="18px">
                         </span>
-                        <a href="score">我的积分</a>
+                        <a href="score"><?php echo $langs['my_scores']; ?></a>
                     </dd>
                     <dd class="menu-item">
                         <span class="left-icon">
                             <img src="/images/icon_balance.png" width="18px" height="18px">
                         </span>
-                        <a href="balance">我的余额</a>
+                        <a href="balance"><?php echo $langs['my_balance']; ?></a>
                     </dd>
                     <dd class="menu-item ">
                         <span class="left-icon">
@@ -82,7 +82,7 @@
                         </div>
                     </div>
                     <div class="accountformfield phonefield">
-                        <label>手机号</label><input id="pn" placeholder="请输入您的手机号">
+                        <label><?php echo $langs['phonenumber']; ?></label><input id="pn" placeholder="<?php echo $langs['placeholder_phonenumber']; ?>">
                         <div class="accountformfield-hint form-error">
                             <span id="error-pn"></span>
                         </div>
@@ -127,10 +127,10 @@
     <script src="/scripts/shopInfo.js"></script>
     <script src="/scripts/footer.js"></script>
     <script type="text/javascript">
-        $(function () {
+        $(function() {
 
             //点击保存
-            $("#save-address").click(function (event) {
+            $("#save-address").click(function(event) {
                 saveMyAddress();
             });
 
@@ -197,15 +197,14 @@
                 return;
             }
             var postUrl = "/ajax/saveUserInfo.php";
-            $.post(postUrl,
-                {
+            $.post(postUrl, {
                     username: $username,
                     pn: pn,
                     name: name,
                     place: place,
                     addressDetail: addressDetail
                 },
-                function (data, status, xhr) {
+                function(data, status, xhr) {
                     if (status == "success") {
                         $res = $.parseJSON(data);
                         if ($res.code == "0") {
@@ -223,7 +222,6 @@
                     }
                 });
         }
-
     </script>
 </body>
 
