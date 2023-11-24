@@ -21,7 +21,7 @@ $row=fetchOne($sql);
 if(!$row){
     $obj = new stdClass();
     $obj->code="1";
-    $obj->msg=urlencode("该用户不存在");//中文urlencode一下
+    $obj->msg=urlencode($langs['user_not_exist']);//中文urlencode一下
     echo urldecode(json_encode($obj));
     return;
 }
@@ -39,7 +39,7 @@ if($row){
 }else{
     $obj = new stdClass();
     $obj->code="2";
-    $obj->msg=urlencode("密码错误");//中文urlencode一下
+    $obj->msg=urlencode($langs['wrong_password']);//中文urlencode一下
     echo urldecode(json_encode($obj)); 
 }
  

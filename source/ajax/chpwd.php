@@ -20,7 +20,7 @@ $row=fetchOne($sql);
 if(!$row){
     $obj = new stdClass();
     $obj->code="1";
-    $obj->msg=urlencode("该用户不存在");//中文urlencode一下
+    $obj->msg=urlencode($langs['user_not_exist']);//中文urlencode一下
     echo urldecode(json_encode($obj));
     return;
 }
@@ -31,12 +31,12 @@ $arr['password']=$pwd;
 if(update("dfz_user", $arr,"username={$username}")){
     $obj = new stdClass();
     $obj->code="0";
-    $obj->msg=urlencode("修改成功");//中文urlencode一下
+    $obj->msg=urlencode($langs['success_modified']);//中文urlencode一下
     echo urldecode(json_encode($obj)); 
 }else{
     $obj = new stdClass();
     $obj->code="1";
-    $obj->msg=urlencode("修改失败");//中文urlencode一下
+    $obj->msg=urlencode($langs['fail_to_edit']);//中文urlencode一下
     echo urldecode(json_encode($obj)); 
 }
  

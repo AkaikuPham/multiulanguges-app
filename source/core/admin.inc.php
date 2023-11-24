@@ -1,4 +1,7 @@
 <?php 
+
+include('../check_lang.php');
+
 /**
  * 检查管理员是否存在
  * @param unknown_type $sql
@@ -25,18 +28,19 @@ function checkLogined(){
  * @return string
  */
 function addAdmin(){
+	global $langs;
 	$arr=$_POST;
 	$arr['password']=md5($_POST['password']);
 	if(empty($arr['username'])||empty($arr['password'])||empty($arr['email'])){
-		$mes="不能为空!<br/><a href='addAdmin.php'>重新添加</a>";
+		$mes = $langs['not_empty'] . "!<br/><a href='addAdmin.php'>" . $langs['readd'] . "</a>";
 	}elseif(checkAdmin($arr['username'])){
-		$mes="已经存在该用户名!<br/><a href='addAdmin.php'>重新添加</a>";
+		$mes = $langs['username_already_exists'] . "!<br/><a href='addAdmin.php'>" . $langs['readd'] . "</a>";
 	}
 	else{
 		if(insert("dfz_admin",$arr)){
 		$mes="添加成功!<br/><a href='addAdmin.php'>继续添加</a>|<a href='listAdmin.php'>查看管理员列表</a>";
 		}else{
-			$mes="添加失败!<br/><a href='addAdmin.php'>重新添加</a>";
+			$mes="添加失败!<br/><a href='addAdmin.php'>" . $langs['readd'] . "</a>";
 		}
 	}
 	
@@ -122,13 +126,14 @@ function logout(){
  * @return string
  */
 function addUser(){
+	global $langs;
 	$arr=$_POST;
 	$arr['password']=md5($_POST['password']);
 	$arr['regTime']=time();  
 	if(insert("dfz_user", $arr)){
 		$mes="添加成功!<br/><a href='addUser.php'>继续添加</a>|<a href='listUser.php'>查看列表</a>";
 	}else{ 
-		$mes="添加失败!<br/><a href='addUser.php'>重新添加</a>|<a href='listUser.php'>查看列表</a>";
+		$mes="添加失败!<br/><a href='addUser.php'>" . $langs['readd'] . "</a>|<a href='listUser.php'>查看列表</a>";
 	}
 	return $mes;
 }

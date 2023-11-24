@@ -1,3 +1,7 @@
+<?php
+include('check_lang.php');
+?>
+
 <!DOCTYPE html>
 <html>
 
@@ -22,7 +26,7 @@
     <link rel=stylesheet href="style/reveal.css">
     <link rel=stylesheet href="style/login.css">
     <link rel=stylesheet href="style/order_confirm.css">
-    <title>订饭组-网上订餐_外卖_订餐官网</title>
+    <title><?php echo $langs['order_confirm_title']; ?></title>
 </head>
 
 <body>
@@ -30,58 +34,58 @@
     <?php require_once 'layouts/header.php'; ?>
 
     <div class="order-top-info">
-        <span><?php echo $langs['home_page']; ?>&nbsp;&gt;&nbsp;<a class="info-place" onclick="JavaScript:history.go(-1);"></a>&nbsp;&gt;&nbsp;确认订单</span>
+        <span><?php echo $langs['home_page']; ?>&nbsp;&gt;&nbsp;<a class="info-place" onclick="JavaScript:history.go(-1);"></a>&nbsp;&gt;&nbsp;<?php echo $langs['confirm_order']; ?></span>
     </div>
 
     <div class="order-confirm-content">
         <div class="checkout-info">
             <div class="checkout-title">
-                <h2>订单信息</h2>
+                <h2><?php echo $langs['order_information']; ?></h2>
                 <a onclick="JavaScript:history.go(-1);">&lt; <?php echo $langs['return_cart_modify']; ?>
                 </a>
             </div>
             <div class="checkout-tablehead">
-                <div class="cell itemname">商品</div>
-                <div class="cell itemquantity">份数</div>
-                <div class="cell itemtotal">小计（元）</div>
+                <div class="cell itemname"><?php echo $langs['merchandise']; ?></div>
+                <div class="cell itemquantity"><?php echo $langs['number_of_copies']; ?></div>
+                <div class="cell itemtotal"><?php echo $langs['subtotal']; ?></div>
             </div>
             <ul class="checkout-body">
 
             </ul>
             <div class="checkout-bottom">
-                <span>实付：<a style="color:#f74342;">￥</a><a class="checkout-bottom-price">...</a>
+                <span><?php echo $langs['actually_paid']; ?><a style="color:#f74342;">￥</a><a class="checkout-bottom-price">...</a>
                 </span>
             </div>
         </div>
 
         <div class="checkout-content">
             <div class="checkout-select">
-                <h2>收货地址</h2>
-                <a class="checkout-noaddress " data-reveal-id="addressModal" data-animation="fade">+ 添加地址</a>
+                <h2><?php echo $langs['shipping_address']; ?></h2>
+                <a class="checkout-noaddress " data-reveal-id="addressModal" data-animation="fade">+ <?php echo $langs['add_address']; ?></a>
                 <div class="n checkout-address">
                     <span class="address-npa"></span>
-                    <a class="address-modify" data-reveal-id="addressModal" data-animation="fade">修改</a>
+                    <a class="address-modify" data-reveal-id="addressModal" data-animation="fade"><?php echo $langs['revise']; ?></a>
                 </div>
             </div>
             <div class="checkout-select">
-                <h2>付款方式</h2>
+                <h2><?php echo $langs['payment_method']; ?></h2>
                 <ul class="checkout-ul">
                     <li class="checkout-pay first disabled">
-                        <p class="weixin-pay">微信支付</p>
+                        <p class="weixin-pay"><?php echo $langs['wechat_pay']; ?></p>
                     </li>
                     <li class="checkout-pay second disabled">
                         <p class="alipay-pay"></p>
                     </li>
                     <li class="checkout-pay disabled">
-                        <p class="no-pay">餐到付款</p>
+                        <p class="no-pay"><?php echo $langs['pay_on_delivery']; ?></p>
                     </li>
                 </ul>
             </div>
             <div class="checkout-select">
-                <h2>我的优惠</h2>
+                <h2><?php echo $langs['my_offers']; ?></h2>
                 <p class="checkout-jifen">
                     <span class="jifen-label"><?php echo $langs['my_scores']; ?>：</span>
-                    <span class="jifen-value">积分抵现：￥</span>
+                    <span class="jifen-value"><?php echo $langs['point_cash']; ?></span>
                 </p>
                 <div class="checkout-daijinjuan">
                     <ul class="daijinjuan-ul">
@@ -89,20 +93,20 @@
                             <p>￥<span>3</span></p>
                         </li>
                     </ul>
-                    <span class="daijinjuan-value">代金券：￥0</span>
+                    <span class="daijinjuan-value"><?php echo $langs['price_ticket']; ?>￥0</span>
                 </div>
             </div>
             <div class="checkout-select">
-                <h2>送达时间</h2>
+                <h2><?php echo $langs['delivery_time']; ?></h2>
                 <select class="select-arrived-time">
                 </select>
             </div>
             <div class="checkout-select">
-                <h2>留言</h2>
-                <input class="liuyan-txt" placeholder="少放辣椒。少放盐。">
+                <h2><?php echo $langs['message']; ?></h2>
+                <input class="liuyan-txt" placeholder="<?php echo $langs['placeholder_less_salt']; ?>">
             </div>
             <div class="checkout-select">
-                <a class="commit-btn" target="_blank">确认下单</a>
+                <a class="commit-btn" target="_blank"><?php echo $langs['confirm_order_02']; ?></a>
             </div>
         </div>
         <div class="clear"></div>
@@ -116,10 +120,10 @@
 
     <div id="addressModal" class="reveal-modal">
         <div id="addressform" class="addressform">
-            <span class="address-title">送餐地址</span>
+            <span class="address-title"><?php echo $langs['delivery_address']; ?></span>
             <div class="addressformfield">
-                <label class="address-name">姓名:</label>
-                <input id="address-name" placeholder="请输入姓名" maxlength="12">
+                <label class="address-name"><?php echo $langs['name']; ?>:</label>
+                <input id="address-name" placeholder="<?php echo $langs['placeholder_type_name']; ?>" maxlength="12">
                 <label id="error-name" class="error"></label>
             </div>
             <div class="addressformfield">
@@ -136,7 +140,7 @@
                 <label id="error-detail" class="error"></label>
             </div>
             <div class="addressform-buttons">
-                <a class="save-btn" href="#">保存</a>
+                <a class="save-btn" href="#"><?php echo $langs['keep']; ?></a>
             </div>
         </div>
         <a class="close-reveal-modal"><img src="images/icon_close.png" height="24" width="24"></a>
@@ -146,7 +150,7 @@
     <div id="alertModel" class="alertModel">
         <a id="alert" data-reveal-id="alertModel" data-animation="fade"></a>
         <span id="alert-msg"></span>
-        <a id="btn-ok" class="btn">知道了</a>
+        <a id="btn-ok" class="btn"><?php echo $langs['knew']; ?></a>
         <a id="btn-close" class="close-reveal-modal"><img src="images/icon_close.png" height="24" width="24"></a>
     </div>
 

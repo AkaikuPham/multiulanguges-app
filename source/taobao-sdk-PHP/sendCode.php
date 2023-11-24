@@ -7,6 +7,7 @@
 
     //发送验证码并返回结果  需要在阿里大于申请
     function sendCode($pn,$code){
+        global $langs;
         $appkey="23385013";
         // 密钥
         $secret="";
@@ -17,7 +18,7 @@
         $req = new AlibabaAliqinFcSmsNumSendRequest;
         $req ->setExtend( "2438" );
         $req ->setSmsType( "normal" );
-        $req ->setSmsFreeSignName( "订饭组" );
+        $req ->setSmsFreeSignName($langs['meal_ordering_group']);
         $req ->setSmsParam( "{code:'$code'}" ); 
         $req ->setRecNum($pn);
         $req ->setSmsTemplateCode( "SMS_10540034" );

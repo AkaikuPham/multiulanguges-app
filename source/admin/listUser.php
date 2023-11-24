@@ -31,7 +31,7 @@ if (!$rows) {
             <thead>
                 <tr>
                     <th width="20%">用户名称</th>
-                    <th width="20%">姓名</th>
+                    <th width="20%"><?php echo $langs['name']; ?></th>
                     <th width="20%"><?php echo $langs['address']; ?></th>
                     <th width="20%">注册时间</th>
                     <th>操作</th>

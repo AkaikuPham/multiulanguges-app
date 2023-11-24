@@ -1,3 +1,7 @@
+<?php
+include('check_lang.php');
+?>
+
 <!DOCTYPE html>
 <html>
 
@@ -14,7 +18,7 @@
     <link rel=stylesheet href="style/reveal.css">
     <link rel=stylesheet href="style/login.css">
     <link rel=stylesheet href="style/weixinPay.css">
-    <title>订饭组</title>
+    <title><?php echo $langs['meal_ordering_group']; ?></title>
 </head>
 
 <body>
@@ -55,7 +59,7 @@
     <div class="content-wrap">
         <div class="content">
             <div class="w-title">
-                <span class="w-title-left">使用微信支付：</span>
+                <span class="w-title-left"><?php echo $langs['pay_with_wechat']; ?></span>
                 <span class="w-title-right">￥12.50</span>
             </div>
             <div class="w-qrcode">

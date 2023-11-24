@@ -1,3 +1,7 @@
+<?php
+include('check_lang.php');
+?>
+
 <!DOCTYPE html>
 <html>
 
@@ -23,7 +27,7 @@
     <link rel=stylesheet href="/style/leftmenu.css">
     <link rel=stylesheet href="/style/reveal.css">
     <link rel=stylesheet href="/style/login.css">
-    <title>订饭组</title>
+    <title><?php echo $langs['meal_ordering_group']; ?></title>
 </head>
 
 <body>
@@ -35,7 +39,7 @@
                 <div class="item-wrap">
                     <img src="images/test01.jpg" height="130" width="130">
                     <div class="item-detail">
-                        <span class="name ">宫保鸡丁+鸡蛋炒黄瓜+西红柿抄牛腩</span>
+                        <span class="name "><?php echo $langs['chicken_egg_beef']; ?></span>
                         <span class="price" item-price="15">￥15</span>
                         <img class="buy" src="images/icon_buy.png">
 
@@ -53,7 +57,7 @@
                 <div class="item-wrap">
                     <img src="images/test01.jpg" height="130" width="130">
                     <div class="item-detail">
-                        <span class="name ">宫保鸡丁</span>
+                        <span class="name "><?php echo $langs['chicken']; ?></span>
                         <span class="price" item-price="15">￥15</span>
                         <img class="buy" src="images/icon_buy.png">
 
@@ -71,7 +75,7 @@
                 <div class="item-wrap">
                     <img src="images/test01.jpg" height="130" width="130">
                     <div class="item-detail">
-                        <span class="name ">宫保鸡丁+鸡蛋炒黄瓜+西红柿抄牛腩</span>
+                        <span class="name "><?php echo $langs['chicken_egg_beef']; ?></span>
                         <span class="price" item-price="15">￥15</span>
                         <img class="buy" src="images/icon_buy.png">
 
@@ -89,7 +93,7 @@
                 <div class="item-wrap">
                     <img src="images/test01.jpg" height="130" width="130">
                     <div class="item-detail">
-                        <span class="name ">宫保鸡丁+鸡蛋炒黄瓜+西红柿抄牛腩</span>
+                        <span class="name "><?php echo $langs['chicken_egg_beef']; ?></span>
                         <span class="price" item-price="15">￥15</span>
                         <img class="buy" src="images/icon_buy.png">
 
@@ -107,7 +111,7 @@
                 <div class="item-wrap">
                     <img src="images/test01.jpg" height="130" width="130">
                     <div class="item-detail">
-                        <span class="name ">宫保鸡丁+鸡蛋炒黄瓜+西红柿抄牛腩</span>
+                        <span class="name "><?php echo $langs['chicken_egg_beef']; ?></span>
                         <span class="price" item-price="15">￥15</span>
                         <img class="buy" src="images/icon_buy.png">
 
@@ -125,7 +129,7 @@
                 <div class="item-wrap">
                     <img src="images/test01.jpg" height="130" width="130">
                     <div class="item-detail">
-                        <span class="name ">宫保鸡丁+鸡蛋炒黄瓜+西红柿抄牛腩</span>
+                        <span class="name "><?php echo $langs['chicken_egg_beef']; ?></span>
                         <span class="price" item-price="15">￥15</span>
                         <img class="buy" src="images/icon_buy.png">
 
@@ -143,7 +147,7 @@
                 <div class="item-wrap">
                     <img src="images/test01.jpg" height="130" width="130">
                     <div class="item-detail">
-                        <span class="name ">宫保鸡丁+鸡蛋炒黄瓜+西红柿抄牛腩</span>
+                        <span class="name "><?php echo $langs['chicken_egg_beef']; ?></span>
                         <span class="price" item-price="15">￥15</span>
                         <img class="buy" src="images/icon_buy.png">
 
@@ -161,7 +165,7 @@
                 <div class="item-wrap">
                     <img src="images/test01.jpg" height="130" width="130">
                     <div class="item-detail">
-                        <span class="name ">宫保鸡丁+鸡蛋炒黄瓜+西红柿抄牛腩</span>
+                        <span class="name "><?php echo $langs['chicken_egg_beef']; ?></span>
                         <span class="price" item-price="15">￥15</span>
                         <img class="buy" src="images/icon_buy.png">
 
@@ -183,7 +187,7 @@
                 <div class="item-wrap">
                     <img src="images/test01.jpg" height="130" width="130">
                     <div class="item-detail">
-                        <span class="name ">宫保鸡丁+鸡蛋炒黄瓜+西红柿抄牛腩</span>
+                        <span class="name "><?php echo $langs['chicken_egg_beef']; ?></span>
                         <span class="price" item-price="15">￥15</span>
                         <img class="buy" src="images/icon_buy.png">
 
@@ -201,7 +205,7 @@
                 <div class="item-wrap">
                     <img src="images/test01.jpg" height="130" width="130">
                     <div class="item-detail">
-                        <span class="name ">宫保鸡丁</span>
+                        <span class="name "><?php echo $langs['chicken']; ?></span>
                         <span class="price" item-price="15">￥15</span>
                         <img class="buy" src="images/icon_buy.png">
 
@@ -219,7 +223,7 @@
                 <div class="item-wrap">
                     <img src="images/test01.jpg" height="130" width="130">
                     <div class="item-detail">
-                        <span class="name ">宫保鸡丁+鸡蛋炒黄瓜+西红柿抄牛腩</span>
+                        <span class="name "><?php echo $langs['chicken_egg_beef']; ?></span>
                         <span class="price" item-price="15">￥15</span>
                         <img class="buy" src="images/icon_buy.png">
 
@@ -237,7 +241,7 @@
                 <div class="item-wrap">
                     <img src="images/test01.jpg" height="130" width="130">
                     <div class="item-detail">
-                        <span class="name ">宫保鸡丁+鸡蛋炒黄瓜+西红柿抄牛腩</span>
+                        <span class="name "><?php echo $langs['chicken_egg_beef']; ?></span>
                         <span class="price" item-price="15">￥15</span>
                         <img class="buy" src="images/icon_buy.png">
 
@@ -255,7 +259,7 @@
                 <div class="item-wrap">
                     <img src="images/test01.jpg" height="130" width="130">
                     <div class="item-detail">
-                        <span class="name ">宫保鸡丁+鸡蛋炒黄瓜+西红柿抄牛腩</span>
+                        <span class="name "><?php echo $langs['chicken_egg_beef']; ?></span>
                         <span class="price" item-price="15">￥15</span>
                         <img class="buy" src="images/icon_buy.png">
 
@@ -273,7 +277,7 @@
                 <div class="item-wrap">
                     <img src="images/test01.jpg" height="130" width="130">
                     <div class="item-detail">
-                        <span class="name ">宫保鸡丁+鸡蛋炒黄瓜+西红柿抄牛腩</span>
+                        <span class="name "><?php echo $langs['chicken_egg_beef']; ?></span>
                         <span class="price" item-price="15">￥15</span>
                         <img class="buy" src="images/icon_buy.png">
 
@@ -291,7 +295,7 @@
                 <div class="item-wrap">
                     <img src="images/test01.jpg" height="130" width="130">
                     <div class="item-detail">
-                        <span class="name ">宫保鸡丁+鸡蛋炒黄瓜+西红柿抄牛腩</span>
+                        <span class="name "><?php echo $langs['chicken_egg_beef']; ?></span>
                         <span class="price" item-price="15">￥15</span>
                         <img class="buy" src="images/icon_buy.png">
 
@@ -309,7 +313,7 @@
                 <div class="item-wrap">
                     <img src="images/test01.jpg" height="130" width="130">
                     <div class="item-detail">
-                        <span class="name ">宫保鸡丁+鸡蛋炒黄瓜+西红柿抄牛腩</span>
+                        <span class="name "><?php echo $langs['chicken_egg_beef']; ?></span>
                         <span class="price" item-price="15">￥15</span>
                         <img class="buy" src="images/icon_buy.png">
 
@@ -329,7 +333,7 @@
                 <div class="item-wrap">
                     <img src="images/test01.jpg" height="130" width="130">
                     <div class="item-detail">
-                        <span class="name ">宫保鸡丁+鸡蛋炒黄瓜+西红柿抄牛腩</span>
+                        <span class="name "><?php echo $langs['chicken_egg_beef']; ?></span>
                         <span class="price" item-price="15">￥15</span>
                         <img class="buy" src="images/icon_buy.png">
 
@@ -347,7 +351,7 @@
                 <div class="item-wrap">
                     <img src="images/test01.jpg" height="130" width="130">
                     <div class="item-detail">
-                        <span class="name ">宫保鸡丁</span>
+                        <span class="name "><?php echo $langs['chicken']; ?></span>
                         <span class="price" item-price="15">￥15</span>
                         <img class="buy" src="images/icon_buy.png">
 
@@ -365,7 +369,7 @@
                 <div class="item-wrap">
                     <img src="images/test01.jpg" height="130" width="130">
                     <div class="item-detail">
-                        <span class="name ">宫保鸡丁+鸡蛋炒黄瓜+西红柿抄牛腩</span>
+                        <span class="name "><?php echo $langs['chicken_egg_beef']; ?></span>
                         <span class="price" item-price="15">￥15</span>
                         <img class="buy" src="images/icon_buy.png">
 
@@ -383,7 +387,7 @@
                 <div class="item-wrap">
                     <img src="images/test01.jpg" height="130" width="130">
                     <div class="item-detail">
-                        <span class="name ">宫保鸡丁+鸡蛋炒黄瓜+西红柿抄牛腩</span>
+                        <span class="name "><?php echo $langs['chicken_egg_beef']; ?></span>
                         <span class="price" item-price="15">￥15</span>
                         <img class="buy" src="images/icon_buy.png">
 
@@ -401,7 +405,7 @@
                 <div class="item-wrap">
                     <img src="images/test01.jpg" height="130" width="130">
                     <div class="item-detail">
-                        <span class="name ">宫保鸡丁+鸡蛋炒黄瓜+西红柿抄牛腩</span>
+                        <span class="name "><?php echo $langs['chicken_egg_beef']; ?></span>
                         <span class="price" item-price="15">￥15</span>
                         <img class="buy" src="images/icon_buy.png">
 
@@ -419,7 +423,7 @@
                 <div class="item-wrap">
                     <img src="images/test01.jpg" height="130" width="130">
                     <div class="item-detail">
-                        <span class="name ">宫保鸡丁+鸡蛋炒黄瓜+西红柿抄牛腩</span>
+                        <span class="name "><?php echo $langs['chicken_egg_beef']; ?></span>
                         <span class="price" item-price="15">￥15</span>
                         <img class="buy" src="images/icon_buy.png">
 
@@ -437,7 +441,7 @@
                 <div class="item-wrap">
                     <img src="images/test01.jpg" height="130" width="130">
                     <div class="item-detail">
-                        <span class="name ">宫保鸡丁+鸡蛋炒黄瓜+西红柿抄牛腩</span>
+                        <span class="name "><?php echo $langs['chicken_egg_beef']; ?></span>
                         <span class="price" item-price="15">￥15</span>
                         <img class="buy" src="images/icon_buy.png">
 
@@ -455,7 +459,7 @@
                 <div class="item-wrap">
                     <img src="images/test01.jpg" height="130" width="130">
                     <div class="item-detail">
-                        <span class="name ">宫保鸡丁+鸡蛋炒黄瓜+西红柿抄牛腩</span>
+                        <span class="name "><?php echo $langs['chicken_egg_beef']; ?></span>
                         <span class="price" item-price="15">￥15</span>
                         <img class="buy" src="images/icon_buy.png">
 
@@ -475,7 +479,7 @@
                 <div class="item-wrap">
                     <img src="images/test01.jpg" height="130" width="130">
                     <div class="item-detail">
-                        <span class="name ">宫保鸡丁+鸡蛋炒黄瓜+西红柿抄牛腩</span>
+                        <span class="name "><?php echo $langs['chicken_egg_beef']; ?></span>
                         <span class="price" item-price="15">￥15</span>
                         <img class="buy" src="images/icon_buy.png">
 
@@ -493,7 +497,7 @@
                 <div class="item-wrap">
                     <img src="images/test01.jpg" height="130" width="130">
                     <div class="item-detail">
-                        <span class="name ">宫保鸡丁</span>
+                        <span class="name "><?php echo $langs['chicken']; ?></span>
                         <span class="price" item-price="15">￥15</span>
                         <img class="buy" src="images/icon_buy.png">
 
@@ -511,7 +515,7 @@
                 <div class="item-wrap">
                     <img src="images/test01.jpg" height="130" width="130">
                     <div class="item-detail">
-                        <span class="name ">宫保鸡丁+鸡蛋炒黄瓜+西红柿抄牛腩</span>
+                        <span class="name "><?php echo $langs['chicken_egg_beef']; ?></span>
                         <span class="price" item-price="15">￥15</span>
                         <img class="buy" src="images/icon_buy.png">
 
@@ -529,7 +533,7 @@
                 <div class="item-wrap">
                     <img src="images/test01.jpg" height="130" width="130">
                     <div class="item-detail">
-                        <span class="name ">宫保鸡丁+鸡蛋炒黄瓜+西红柿抄牛腩</span>
+                        <span class="name "><?php echo $langs['chicken_egg_beef']; ?></span>
                         <span class="price" item-price="15">￥15</span>
                         <img class="buy" src="images/icon_buy.png">
 
@@ -547,7 +551,7 @@
                 <div class="item-wrap">
                     <img src="images/test01.jpg" height="130" width="130">
                     <div class="item-detail">
-                        <span class="name ">宫保鸡丁+鸡蛋炒黄瓜+西红柿抄牛腩</span>
+                        <span class="name "><?php echo $langs['chicken_egg_beef']; ?></span>
                         <span class="price" item-price="15">￥15</span>
                         <img class="buy" src="images/icon_buy.png">
 
@@ -565,7 +569,7 @@
                 <div class="item-wrap">
                     <img src="images/test01.jpg" height="130" width="130">
                     <div class="item-detail">
-                        <span class="name ">宫保鸡丁+鸡蛋炒黄瓜+西红柿抄牛腩</span>
+                        <span class="name "><?php echo $langs['chicken_egg_beef']; ?></span>
                         <span class="price" item-price="15">￥15</span>
                         <img class="buy" src="images/icon_buy.png">
 
@@ -583,7 +587,7 @@
                 <div class="item-wrap">
                     <img src="images/test01.jpg" height="130" width="130">
                     <div class="item-detail">
-                        <span class="name ">宫保鸡丁+鸡蛋炒黄瓜+西红柿抄牛腩</span>
+                        <span class="name "><?php echo $langs['chicken_egg_beef']; ?></span>
                         <span class="price" item-price="15">￥15</span>
                         <img class="buy" src="images/icon_buy.png">
 
@@ -601,7 +605,7 @@
                 <div class="item-wrap">
                     <img src="images/test01.jpg" height="130" width="130">
                     <div class="item-detail">
-                        <span class="name ">宫保鸡丁+鸡蛋炒黄瓜+西红柿抄牛腩</span>
+                        <span class="name "><?php echo $langs['chicken_egg_beef']; ?></span>
                         <span class="price" item-price="15">￥15</span>
                         <img class="buy" src="images/icon_buy.png">
 
@@ -621,7 +625,7 @@
                 <div class="item-wrap">
                     <img src="images/test01.jpg" height="130" width="130">
                     <div class="item-detail">
-                        <span class="name ">宫保鸡丁+鸡蛋炒黄瓜+西红柿抄牛腩</span>
+                        <span class="name "><?php echo $langs['chicken_egg_beef']; ?></span>
                         <span class="price" item-price="15">￥15</span>
                         <img class="buy" src="images/icon_buy.png">
 
@@ -639,7 +643,7 @@
                 <div class="item-wrap">
                     <img src="images/test01.jpg" height="130" width="130">
                     <div class="item-detail">
-                        <span class="name ">宫保鸡丁</span>
+                        <span class="name "><?php echo $langs['chicken']; ?></span>
                         <span class="price" item-price="15">￥15</span>
                         <img class="buy" src="images/icon_buy.png">
 
@@ -657,7 +661,7 @@
                 <div class="item-wrap">
                     <img src="images/test01.jpg" height="130" width="130">
                     <div class="item-detail">
-                        <span class="name ">宫保鸡丁+鸡蛋炒黄瓜+西红柿抄牛腩</span>
+                        <span class="name "><?php echo $langs['chicken_egg_beef']; ?></span>
                         <span class="price" item-price="15">￥15</span>
                         <img class="buy" src="images/icon_buy.png">
 
@@ -675,7 +679,7 @@
                 <div class="item-wrap">
                     <img src="images/test01.jpg" height="130" width="130">
                     <div class="item-detail">
-                        <span class="name ">宫保鸡丁+鸡蛋炒黄瓜+西红柿抄牛腩</span>
+                        <span class="name "><?php echo $langs['chicken_egg_beef']; ?></span>
                         <span class="price" item-price="15">￥15</span>
                         <img class="buy" src="images/icon_buy.png">
 
@@ -693,7 +697,7 @@
                 <div class="item-wrap">
                     <img src="images/test01.jpg" height="130" width="130">
                     <div class="item-detail">
-                        <span class="name ">宫保鸡丁+鸡蛋炒黄瓜+西红柿抄牛腩</span>
+                        <span class="name "><?php echo $langs['chicken_egg_beef']; ?></span>
                         <span class="price" item-price="15">￥15</span>
                         <img class="buy" src="images/icon_buy.png">
 
@@ -711,7 +715,7 @@
                 <div class="item-wrap">
                     <img src="images/test01.jpg" height="130" width="130">
                     <div class="item-detail">
-                        <span class="name ">宫保鸡丁+鸡蛋炒黄瓜+西红柿抄牛腩</span>
+                        <span class="name "><?php echo $langs['chicken_egg_beef']; ?></span>
                         <span class="price" item-price="15">￥15</span>
                         <img class="buy" src="images/icon_buy.png">
 
@@ -729,7 +733,7 @@
                 <div class="item-wrap">
                     <img src="images/test01.jpg" height="130" width="130">
                     <div class="item-detail">
-                        <span class="name ">宫保鸡丁+鸡蛋炒黄瓜+西红柿抄牛腩</span>
+                        <span class="name "><?php echo $langs['chicken_egg_beef']; ?></span>
                         <span class="price" item-price="15">￥15</span>
                         <img class="buy" src="images/icon_buy.png">
 
@@ -747,7 +751,7 @@
                 <div class="item-wrap">
                     <img src="images/test01.jpg" height="130" width="130">
                     <div class="item-detail">
-                        <span class="name ">宫保鸡丁+鸡蛋炒黄瓜+西红柿抄牛腩</span>
+                        <span class="name "><?php echo $langs['chicken_egg_beef']; ?></span>
                         <span class="price" item-price="15">￥15</span>
                         <img class="buy" src="images/icon_buy.png">
 
@@ -767,7 +771,7 @@
                 <div class="item-wrap">
                     <img src="images/test01.jpg" height="130" width="130">
                     <div class="item-detail">
-                        <span class="name ">宫保鸡丁+鸡蛋炒黄瓜+西红柿抄牛腩</span>
+                        <span class="name "><?php echo $langs['chicken_egg_beef']; ?></span>
                         <span class="price" item-price="15">￥15</span>
                         <img class="buy" src="images/icon_buy.png">
 
@@ -785,7 +789,7 @@
                 <div class="item-wrap">
                     <img src="images/test01.jpg" height="130" width="130">
                     <div class="item-detail">
-                        <span class="name ">宫保鸡丁</span>
+                        <span class="name "><?php echo $langs['chicken']; ?></span>
                         <span class="price" item-price="15">￥15</span>
                         <img class="buy" src="images/icon_buy.png">
 
@@ -803,7 +807,7 @@
                 <div class="item-wrap">
                     <img src="images/test01.jpg" height="130" width="130">
                     <div class="item-detail">
-                        <span class="name ">宫保鸡丁+鸡蛋炒黄瓜+西红柿抄牛腩</span>
+                        <span class="name "><?php echo $langs['chicken_egg_beef']; ?></span>
                         <span class="price" item-price="15">￥15</span>
                         <img class="buy" src="images/icon_buy.png">
 
@@ -821,7 +825,7 @@
                 <div class="item-wrap">
                     <img src="images/test01.jpg" height="130" width="130">
                     <div class="item-detail">
-                        <span class="name ">宫保鸡丁+鸡蛋炒黄瓜+西红柿抄牛腩</span>
+                        <span class="name "><?php echo $langs['chicken_egg_beef']; ?></span>
                         <span class="price" item-price="15">￥15</span>
                         <img class="buy" src="images/icon_buy.png">
 
@@ -839,7 +843,7 @@
                 <div class="item-wrap">
                     <img src="images/test01.jpg" height="130" width="130">
                     <div class="item-detail">
-                        <span class="name ">宫保鸡丁+鸡蛋炒黄瓜+西红柿抄牛腩</span>
+                        <span class="name "><?php echo $langs['chicken_egg_beef']; ?></span>
                         <span class="price" item-price="15">￥15</span>
                         <img class="buy" src="images/icon_buy.png">
 
@@ -857,7 +861,7 @@
                 <div class="item-wrap">
                     <img src="images/test01.jpg" height="130" width="130">
                     <div class="item-detail">
-                        <span class="name ">宫保鸡丁+鸡蛋炒黄瓜+西红柿抄牛腩</span>
+                        <span class="name "><?php echo $langs['chicken_egg_beef']; ?></span>
                         <span class="price" item-price="15">￥15</span>
                         <img class="buy" src="images/icon_buy.png">
 
@@ -875,7 +879,7 @@
                 <div class="item-wrap">
                     <img src="images/test01.jpg" height="130" width="130">
                     <div class="item-detail">
-                        <span class="name ">宫保鸡丁+鸡蛋炒黄瓜+西红柿抄牛腩</span>
+                        <span class="name "><?php echo $langs['chicken_egg_beef']; ?></span>
                         <span class="price" item-price="15">￥15</span>
                         <img class="buy" src="images/icon_buy.png">
 
@@ -893,7 +897,7 @@
                 <div class="item-wrap">
                     <img src="images/test01.jpg" height="130" width="130">
                     <div class="item-detail">
-                        <span class="name ">宫保鸡丁+鸡蛋炒黄瓜+西红柿抄牛腩</span>
+                        <span class="name "><?php echo $langs['chicken_egg_beef']; ?></span>
                         <span class="price" item-price="15">￥15</span>
                         <img class="buy" src="images/icon_buy.png">
 
@@ -914,7 +918,7 @@
 
         <div class="gonggao-wrap">
             <div class="gonggao">
-                <b> 公告：周一到周五午餐时间，11:00-11:30订 12：15前到~ 催单电话：13598825555</b>
+                <b><?php echo $langs['announcement']; ?></b>
             </div>
         </div>
 
@@ -924,18 +928,18 @@
                 <dt>
                     <img class="shop-icon" src="images/test02.jpg">
                     <span class="shop-name" shopId="0001">
-                        北京国际大厦
+                        <?php echo $langs['beijing_international_building']; ?>
                     </span>
                     <span class="switch-address">
-                        <a class="switch-address" href="index.php">[切换地址]</a>
+                        <a class="switch-address" href="index.php"><?php echo $langs['switch_address']; ?></a>
                     </span>
                 </dt>
-                <dd id="i1" class="active leftmenu-item"><a href="#">热门菜品</a></dd>
-                <dd id="i2" class="leftmenu-item"><a href="#">精品三拼</a></dd>
-                <dd id="i3" class="leftmenu-item"><a href="#">精品双拼</a></dd>
-                <dd id="i4" class="leftmenu-item"><a href="#">盖饭</a></dd>
-                <dd id="i5" class="leftmenu-item"><a href="#">主食</a></dd>
-                <dd id="i6" class="leftmenu-item"><a href="#">饮品</a></dd>
+                <dd id="i1" class="active leftmenu-item"><a href="#"><?php echo $langs['popular_dishes']; ?></a></dd>
+                <dd id="i2" class="leftmenu-item"><a href="#"><?php echo $langs['three_quality_products']; ?></a></dd>
+                <dd id="i3" class="leftmenu-item"><a href="#"><?php echo $langs['premium_double_combination']; ?></a></dd>
+                <dd id="i4" class="leftmenu-item"><a href="#"><?php echo $langs['rice_bowl']; ?></a></dd>
+                <dd id="i5" class="leftmenu-item"><a href="#"><?php echo $langs['staple_food']; ?></a></dd>
+                <dd id="i6" class="leftmenu-item"><a href="#"><?php echo $langs['drinks']; ?></a></dd>
             </dl>
         </div>
         <?php require_once 'layouts/shop_cart.php'; ?>
@@ -943,7 +947,7 @@
             <li><a href="account/setting.php" target=""><?php echo $langs['account_settings']; ?></a></li>
             <li><a href="account/order.php" target=""><?php echo $langs['my_order']; ?></a></li>
             <li><a href="account/balance.php" target=""><?php echo $langs['my_balance']; ?></a></li>
-            <li><a href="account/cash.php" target="">代金券</a></li>
+            <li><a href="account/cash.php" target=""><?php echo $langs['payment_ticket']; ?></a></li>
             <li><a href="account/balance.php" target=""><?php echo $langs['my_address']; ?></a></li>
             <li><a id="sub-logout" href="" target=""><?php echo $langs['logout']; ?></a></li>
         </ul>

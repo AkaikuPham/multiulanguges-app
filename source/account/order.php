@@ -41,7 +41,7 @@ if (!$rows) {
     <link rel=stylesheet href="/style/order.css">
     <link rel=stylesheet href="/style/footer_2.css">
     <link rel=stylesheet href="/style/page.css">
-    <title>订饭组</title>
+    <title><?php echo $langs['meal_ordering_group']; ?></title>
 </head>
 
 <body>
@@ -51,7 +51,7 @@ if (!$rows) {
         <div class="content-left fl">
             <div class="menu-left">
                 <dl>
-                    <dt>个人中心</dt>
+                    <dt><?php echo $langs['personal_center']; ?></dt>
                     <dd class="menu-item active">
                         <span class="left-icon">
                             <img src="/images/icon_order.png" width="18px" height="18px">
@@ -62,7 +62,7 @@ if (!$rows) {
                         <span class="left-icon">
                             <img src="/images/icon_address.png" width="18px" height="18px">
                         </span>
-                        <a href="address">送餐地址</a>
+                        <a href="address"><?php echo $langs['delivery_address']; ?></a>
                     </dd>
                     <dd class="menu-item">
                         <span class="left-icon">
@@ -80,7 +80,7 @@ if (!$rows) {
                         <span class="left-icon">
                             <img src="/images/icon_settings.png" width="18px" height="18px">
                         </span>
-                        <a href="setting">账户设置</a>
+                        <a href="setting"><?php echo $langs['account_settings_02']; ?></a>
                     </dd>
                 </dl>
             </div>
@@ -88,7 +88,7 @@ if (!$rows) {
         <!--右侧内容-->
         <div class="content-right fl">
             <div class="summary fl">
-                <h3 class="summary-header">全部订单</h3>
+                <h3 class="summary-header"><?php echo $langs['all_orders']; ?></h3>
             </div>
             <div class="order-content-wrap">
 
@@ -101,7 +101,7 @@ if (!$rows) {
                                         <th colspan="3">
                                             <a href='/shop/<?php echo $row['shopId']; ?>' class="shop-name"><?php echo $row['shopName']; ?></a>
                                             <p class="shop-info">
-                                                <span class="phone-icon"></span>商家电话：<?php echo $row['shopPhone']; ?>
+                                                <span class="phone-icon"></span><?php echo $langs['business_phone_number']; ?><?php echo $row['shopPhone']; ?>
                                             </p>
                                         </th>
                                     </tr>
@@ -122,16 +122,16 @@ if (!$rows) {
                                 </tbody>
                             </table>
                             <div class="order-price">
-                                总价：<span class="ft-red">￥<?php echo $row['price']; ?></span>
+                                <?php echo $langs['total_price']; ?><span class="ft-red">￥<?php echo $row['price']; ?></span>
                             </div>
                             <div class="order-delivery">
                                 <div class="receive-info">
-                                    <span>订单编号：<?php echo $row['orderId']; ?></span>
-                                    <span>送餐地址：<?php echo $row['orderAddress']; ?></span>
-                                    <span>联系人：<?php echo $row['orderName']; ?></span>
-                                    <span>电话：<?php echo $row['orderPhone']; ?></span>
-                                    <span>送达时间：<?php echo $row['orderArrivedTime']; ?></span>
-                                    <span>备注信息：<?php echo $row['orderRemark']; ?></span>
+                                    <span><?php echo $langs['order_number']; ?><?php echo $row['orderId']; ?></span>
+                                    <span><?php echo $langs['delivery_address']; ?>：<?php echo $row['orderAddress']; ?></span>
+                                    <span><?php echo $langs['contact_person']; ?><?php echo $row['orderName']; ?></span>
+                                    <span><?php echo $langs['telephone']; ?><?php echo $row['orderPhone']; ?></span>
+                                    <span><?php echo $langs['delivery_time']; ?>：<?php echo $row['orderArrivedTime']; ?></span>
+                                    <span><?php echo $langs['remarks']; ?><?php echo $row['orderRemark']; ?></span>
                                 </div>
                             </div>
                         </div>
@@ -146,9 +146,9 @@ if (!$rows) {
                                     </div>
                                     <div class="card-body ">
                                         <div class="status-msg">
-                                            订单提交成功
+                                            <?php echo $langs['orders_submitted_success']; ?>
                                         </div>
-                                        <div class="prompt"> 订单号：<?php echo $row['orderId']; ?>
+                                        <div class="prompt"> <?php echo $langs['order_number_02']; ?><?php echo $row['orderId']; ?>
                                         </div>
                                         <div class="time">
                                             <?php echo getDate01($row['orderTime']);
@@ -174,18 +174,18 @@ if (!$rows) {
                                         <div class="status-msg">
                                             <?php
                                             if ($row['paymethod'] == 2) {
-                                                echo "已提交订单";
+                                                echo $langs['order_submitted'];
                                             } else {
-                                                echo  $row['pay'] == 0 ? "等待支付" : "已支付";
+                                                echo  $row['pay'] == 0 ? $langs['wait_for_payment'] : $langs['paid'];
                                             }
                                             ?>
                                         </div>
                                         <div class="prompt">
                                             <?php
                                             if ($row['paymethod'] == 2) {
-                                                echo "等待商家接单";
+                                                echo $langs['waiting_merchant_order'];
                                             } else {
-                                                echo  $row['pay'] == 0 ? "请在提交订单后15分钟内完成支付" : "已支付，订单进行中";
+                                                echo  $row['pay'] == 0 ? $langs['payment_15_minu'] : $langs['paid_order_progress'];
                                             }
                                             ?>
                                         </div>
@@ -207,29 +207,29 @@ if (!$rows) {
                                     <div class="card-body ">
                                         <div class="status-msg">
                                             <?php if ($row['received'] == 1) {
-                                                echo "商家已接单";
+                                                echo $langs['merchant_accepted_order'];
                                             } elseif ($row['received'] == 2) {
-                                                echo "商家拒绝接单";
+                                                echo $langs['merchant_refuses'];
                                             } elseif ($row['received'] == 3) {
-                                                echo "订单完成";
+                                                echo $langs['order_completed'];
                                             } elseif ($row['received'] == 4) {
-                                                echo "订单取消";
+                                                echo $langs['cancel_order'];
                                             } elseif ($row['received'] == 5) {
-                                                echo "订单取消";
+                                                echo $langs['cancel_order'];
                                             }
                                             ?>
                                         </div>
                                         <div class="prompt">
                                             <?php if ($row['received'] == 1) {
-                                                echo "请您耐心等待";
+                                                echo $langs['please_wait'];
                                             } elseif ($row['received'] == 2) {
-                                                echo "商家忙碌，无法接单";
+                                                echo $langs['merchant_busy'];
                                             } elseif ($row['received'] == 3) {
-                                                echo "订单完成，欢迎下次再来";
+                                                echo $langs['order_completed_02'];
                                             } elseif ($row['received'] == 4) {
-                                                echo "未支付，订单自动取消";
+                                                echo $langs['payment_not_made'];
                                             } elseif ($row['received'] == 5) {
-                                                echo "用户取消订单";
+                                                echo $langs['user_cancels_order'];
                                             }
                                             ?>
                                         </div>
@@ -247,15 +247,15 @@ if (!$rows) {
                                     <div class="operator-btns">
                                         <?php
                                         if ($row['paymethod'] != 2 && $row['pay'] == 0 && $row['received'] == 0) {
-                                            echo "<a class=pay-btn onclick=orderPay(" . $row['orderId'] . "," . $row['orderTime'] . ")>支付</a><a class=pay-btn onclick=orderCancel(" . $row['orderId'] . ",'" . $row['username'] . "')>取消</a>";
+                                            echo "<a class=pay-btn onclick=orderPay(" . $row['orderId'] . "," . $row['orderTime'] . ")>" . $langs['pay'] . "</a><a class=pay-btn onclick=orderCancel(" . $row['orderId'] . ",'" . $row['username'] . "')>" . $langs['cancel'] . "</a>";
                                         } else if ($row['paymethod'] == 2 && $row['received'] == 0) {
-                                            echo "<a class=pay-btn onclick=orderCancel(" . $row['orderId'] . ",'" . $row['username'] . "')>取消</a>";
+                                            echo "<a class=pay-btn onclick=orderCancel(" . $row['orderId'] . ",'" . $row['username'] . "')>" . $langs['cancel'] . "</a>";
                                         }
                                         if ($row['received'] == 1) {
-                                            echo "<a class=pay-btn onclick=urgeOrder(" . $row['orderId'] . ",'" . $row['username'] . "')>催单</a>";
+                                            echo "<a class=pay-btn onclick=urgeOrder(" . $row['orderId'] . ",'" . $row['username'] . "')>" . $langs['reminders'] . "</a>";
                                         }
                                         if ($row['received'] == 3) {
-                                            echo "<a class=pay-btn>评价</a><a href='/shop/" . $row['shopId'] . "' class=pay-btn>再买一次</a>";
+                                            echo "<a class=pay-btn>评价</a><a href='/shop/" . $row['shopId'] . "' class=pay-btn>" . $langs['buy_again'] . "</a>";
                                         }
 
                                         ?>
@@ -285,7 +285,7 @@ if (!$rows) {
     <div id="alertModel" class="alertModel">
         <a id="alert" data-reveal-id="alertModel" data-animation="fade"></a>
         <span id="alert-msg"></span>
-        <button id="btn-ok" class="btn">知道了</button>
+        <button id="btn-ok" class="btn"><?php echo $langs['knew']; ?></button>
         <a id="btn-close" class="close-reveal-modal"><img src="/images/icon_close.png" height="24" width="24"></a>
     </div>
 

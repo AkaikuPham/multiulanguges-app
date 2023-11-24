@@ -1,9 +1,13 @@
+<?php
+include('check_lang.php');
+?>
+
 <!DOCTYPE html>
 <html>
 
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <meta name="description" content="订饭组是北京地区知名的在线外卖订餐O2O平台，是写字楼白领专属订餐网站。已覆盖北京数百个写字楼，数十万用户，聚集了数千家餐饮商户。订外卖，找订饭组。" />
+    <meta name="description" content="<?php echo $langs['template_shop_meta']; ?>" />
     <script src="/scripts/jquery-1.8.3.js"></script>
     <script src="/scripts/jquery.reveal.js"></script>
     <script src="/scripts/jquery.cookie.js"></script>
@@ -23,7 +27,7 @@
     <link rel=stylesheet href="/style/leftmenu.css">
     <link rel=stylesheet href="/style/reveal.css">
     <link rel=stylesheet href="/style/login.css">
-    <title>订饭组-外卖_订餐官网</title>
+    <title><?php echo $langs['meal_ordering_website']; ?></title>
 </head>
 
 <body>
@@ -33,7 +37,7 @@
         <div id='m1' class='menu-wrap '>
             <div class='menu-item' item-id='1685431107987'>
                 <div class='item-wrap'><img src='/image_220/1685431107987.jpg' height='130' width='130'>
-                    <div class='item-detail'><span class='name '>西红柿炒鸡蛋</span><span class='price' item-price='11'>￥11</span> <img class='buy' src='/images/icon_buy.png'>
+                    <div class='item-detail'><span class='name '><?php echo $langs['eggs_with_tomatoes']; ?></span><span class='price' item-price='11'>￥11</span> <img class='buy' src='/images/icon_buy.png'>
                         <ul class='stars'>
                             <li data-value='1' class='active'></li>
                             <li data-value='2' class='active'></li>
@@ -46,7 +50,7 @@
             </div>
             <div class='menu-item' item-id='1685438174300'>
                 <div class='item-wrap'><img src='/image_220/1685438174300.jpg' height='130' width='130'>
-                    <div class='item-detail'><span class='name '>烤羊肉串</span><span class='price' item-price='11'>￥11</span> <img class='buy' src='/images/icon_buy.png'>
+                    <div class='item-detail'><span class='name '><?php echo $langs['lamb_kebab']; ?></span><span class='price' item-price='11'>￥11</span> <img class='buy' src='/images/icon_buy.png'>
                         <ul class='stars'>
                             <li data-value='1' class='active'></li>
                             <li data-value='2' class='active'></li>
@@ -59,7 +63,7 @@
             </div>
             <div class='menu-item' item-id='1685438210408'>
                 <div class='item-wrap'><img src='/image_220/1685438210408.jpg' height='130' width='130'>
-                    <div class='item-detail'><span class='name '>白菜豆腐</span><span class='price' item-price='43'>￥43</span> <img class='buy' src='/images/icon_buy.png'>
+                    <div class='item-detail'><span class='name '><?php echo $langs['cabbage_and_tofu']; ?></span><span class='price' item-price='43'>￥43</span> <img class='buy' src='/images/icon_buy.png'>
                         <ul class='stars'>
                             <li data-value='1' class='active'></li>
                             <li data-value='2' class='active'></li>
@@ -72,7 +76,7 @@
             </div>
             <div class='menu-item' item-id='1685438241121'>
                 <div class='item-wrap'><img src='/image_220/1685438241121.jpg' height='130' width='130'>
-                    <div class='item-detail'><span class='name '>西兰花炒鸡蛋</span><span class='price' item-price='54'>￥54</span> <img class='buy' src='/images/icon_buy.png'>
+                    <div class='item-detail'><span class='name '><?php echo $langs['scrambled_eggs_broccoli']; ?></span><span class='price' item-price='54'>￥54</span> <img class='buy' src='/images/icon_buy.png'>
                         <ul class='stars'>
                             <li data-value='1' class='active'></li>
                             <li data-value='2' class='active'></li>
@@ -85,7 +89,7 @@
             </div>
             <div class='menu-item' item-id='1685438368616'>
                 <div class='item-wrap'><img src='/image_220/1685438368616.jpg' height='130' width='130'>
-                    <div class='item-detail'><span class='name '>测试菜品</span><span class='price' item-price='32'>￥32</span> <img class='buy' src='/images/icon_buy.png'>
+                    <div class='item-detail'><span class='name '><?php echo $langs['test_dishes']; ?></span><span class='price' item-price='32'>￥32</span> <img class='buy' src='/images/icon_buy.png'>
                         <ul class='stars'>
                             <li data-value='1' class='active'></li>
                             <li data-value='2' class='active'></li>
@@ -98,7 +102,7 @@
             </div>
             <div class='menu-item' item-id='1685438381267'>
                 <div class='item-wrap'><img src='/image_220/1685438381267.jpg' height='130' width='130'>
-                    <div class='item-detail'><span class='name '>测试21</span><span class='price' item-price='32'>￥32</span> <img class='buy' src='/images/icon_buy.png'>
+                    <div class='item-detail'><span class='name '><?php echo $langs['test21']; ?></span><span class='price' item-price='32'>￥32</span> <img class='buy' src='/images/icon_buy.png'>
                         <ul class='stars'>
                             <li data-value='1' class='active'></li>
                             <li data-value='2' class='active'></li>
@@ -113,7 +117,7 @@
         <div id='m2' class='menu-wrap n'>
             <div class='menu-item' item-id='1685438145553'>
                 <div class='item-wrap'><img src='/image_220/1685438145553.jpg' height='130' width='130'>
-                    <div class='item-detail'><span class='name '>西红柿炒黄瓜</span><span class='price' item-price='43'>￥43</span> <img class='buy' src='/images/icon_buy.png'>
+                    <div class='item-detail'><span class='name '><?php echo $langs['stirfried_tomato']; ?></span><span class='price' item-price='43'>￥43</span> <img class='buy' src='/images/icon_buy.png'>
                         <ul class='stars'>
                             <li data-value='1' class='active'></li>
                             <li data-value='2' class='active'></li>
@@ -128,7 +132,7 @@
         <div id='m3' class='menu-wrap n'>
             <div class='menu-item' item-id='1685438292728'>
                 <div class='item-wrap'><img src='/image_220/1685438292728.jpg' height='130' width='130'>
-                    <div class='item-detail'><span class='name '>鸡蛋汤</span><span class='price' item-price='12'>￥12</span> <img class='buy' src='/images/icon_buy.png'>
+                    <div class='item-detail'><span class='name '><?php echo $langs['egg_soup']; ?></span><span class='price' item-price='12'>￥12</span> <img class='buy' src='/images/icon_buy.png'>
                         <ul class='stars'>
                             <li data-value='1' class='active'></li>
                             <li data-value='2' class='active'></li>
@@ -143,7 +147,7 @@
         <div id='m4' class='menu-wrap n'>
             <div class='menu-item' item-id='1685438308757'>
                 <div class='item-wrap'><img src='/image_220/1685438308757.jpg' height='130' width='130'>
-                    <div class='item-detail'><span class='name '>米饭</span><span class='price' item-price='91'>￥91</span>
+                    <div class='item-detail'><span class='name '><?php echo $langs['rice']; ?></span><span class='price' item-price='91'>￥91</span>
                         <img class='buy' src='/images/icon_buy.png'>
                         <ul class='stars'>
                             <li data-value='1' class='active'></li>
@@ -163,7 +167,7 @@
 
         <div class="gonggao-wrap">
             <div class="gonggao">
-                <b> 欢迎光临</b>
+                <b> <?php echo $langs['welcome']; ?></b>
             </div>
         </div>
 
@@ -171,13 +175,13 @@
         <div class="leftmenu">
             <dl>
                 <dt>
-                    <img class='shop-icon' src='/image_shop/1001.jpg'><span class='shop-name' shopId='1001' shopName='湖北大厦' shopPhone='13599999999'>湖北大厦</span><span class='switch-address'><a class='switch-address' href='/index.php'>[切换地址]</a></span>
+                    <img class='shop-icon' src='/image_shop/1001.jpg'><span class='shop-name' shopId='1001' shopName='<?php echo $langs['hubei_building']; ?>' shopPhone='13599999999'><?php echo $langs['hubei_building']; ?></span><span class='switch-address'><a class='switch-address' href='/index.php'><?php echo $langs['switch_address']; ?></a></span>
 
                 </dt>
-                <dd id='i1' class='active leftmenu-item'><a href='#'>鲁菜</a></dd>
-                <dd id='i2' class=' leftmenu-item'><a href='#'>东北菜</a></dd>
-                <dd id='i3' class=' leftmenu-item'><a href='#'>汤类</a></dd>
-                <dd id='i4' class=' leftmenu-item'><a href='#'>盖饭</a></dd>
+                <dd id='i1' class='active leftmenu-item'><a href='#'><?php echo $langs['shandong_cuisine']; ?></a></dd>
+                <dd id='i2' class=' leftmenu-item'><a href='#'><?php echo $langs['northeastern_cuisine']; ?></a></dd>
+                <dd id='i3' class=' leftmenu-item'><a href='#'><?php echo $langs['soup']; ?></a></dd>
+                <dd id='i4' class=' leftmenu-item'><a href='#'><?php echo $langs['rice_bowl']; ?></a></dd>
 
             </dl>
         </div>
@@ -186,7 +190,7 @@
             <li><a href="/account/setting.php" target=""><?php echo $langs['account_settings']; ?></a></li>
             <li><a href="/account/order.php" target=""><?php echo $langs['my_order']; ?></a></li>
             <li><a href="/account/balance.php" target=""><?php echo $langs['my_balance']; ?></a></li>
-            <li><a href="/account/cash.php" target="">代金券</a></li>
+            <li><a href="/account/cash.php" target=""><?php echo $langs['payment_ticket']; ?></a></li>
             <li><a href="/account/balance.php" target=""><?php echo $langs['my_address']; ?></a></li>
             <li><a id="sub-logout" href="" target=""><?php echo $langs['logout']; ?></a></li>
         </ul>

@@ -1,9 +1,14 @@
 <?php 
+
+include('../check_lang.php');
+
 /**
  * 添加商品
  * @return string
  */
 function addPro(){
+	global $langs;
+
 	$arr=$_POST;
 	$arr['pSn']=getMilliSeconds();
 	$arr['adminName']=$_SESSION['adminName'];
@@ -29,7 +34,7 @@ function addPro(){
 	if($res){ 
 		header("location:listPro.php");
 	}else{
-		$mes="<p>添加失败!</p><a href='addPro.php' target='mainFrame'>重新添加</a>";
+		$mes="<p>添加失败!</p><a href='addPro.php' target='mainFrame'>" . $langs['readd'] . "</a>";
 		
 	}
 	return $mes;

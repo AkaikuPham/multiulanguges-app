@@ -40,7 +40,7 @@ include('check_lang.php');
 
         <div class="place-wrap-1">
             <div class="place-cc">
-                <span>北京</span>
+                <span><?php echo $langs['beijing']; ?></span>
                 <a><?php echo $langs['switch_city']; ?></a>
 
             </div>
@@ -160,7 +160,7 @@ include('check_lang.php');
         <?php require_once 'layouts/shop_cart.php'; ?>
 
         <ul class="place-nav n">
-            <li><a class="city">北京</a></li>
+            <li><a class="city"><?php echo $langs['beijing']; ?></a></li>
             <li><a class="city"><?php echo $langs['tianjin']; ?></a></li>
         </ul>
     </div>
@@ -170,7 +170,7 @@ include('check_lang.php');
     <div id="alertModel" class="alertModel">
         <a id="alert" data-reveal-id="alertModel" data-animation="fade"></a>
         <span id="alert-msg"></span>
-        <button id="btn-ok" class="btn">知道了</button>
+        <button id="btn-ok" class="btn"><?php echo $langs['knew']; ?></button>
         <a class="close-reveal-modal"><img src="images/icon_close.png" height="24" width="24"></a>
     </div>
 

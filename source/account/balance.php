@@ -1,3 +1,7 @@
+<?php
+    include('check_lang.php');
+?>
+
 <!DOCTYPE html>
 <html>
 
@@ -20,7 +24,7 @@
     <link rel=stylesheet href="/style/menu02.css">
     <link rel=stylesheet href="/style/order.css">
     <link rel=stylesheet href="/style/footer_2.css">
-    <title>订饭组</title>
+    <title><?php echo $langs['meal_ordering_group']; ?></title>
 </head>
 
 <body>
@@ -30,7 +34,7 @@
         <div class="content-left fl">
             <div class="menu-left">
                 <dl>
-                    <dt>个人中心</dt>
+                    <dt><?php echo $langs['personal_center']; ?></dt>
                     <dd class="menu-item">
                         <span class="left-icon">
                             <img src="/images/icon_order.png" width="18px" height="18px">
@@ -41,7 +45,7 @@
                         <span class="left-icon">
                             <img src="/images/icon_address.png" width="18px" height="18px">
                         </span>
-                        <a href="address">送餐地址</a>
+                        <a href="address"><?php echo $langs['delivery_address']; ?></a>
                     </dd>
                     <dd class="menu-item">
                         <span class="left-icon">
@@ -59,7 +63,7 @@
                         <span class="left-icon">
                             <img src="/images/icon_settings.png" width="18px" height="18px">
                         </span>
-                        <a href="setting">账户设置</a>
+                        <a href="setting"><?php echo $langs['account_settings_02']; ?></a>
                     </dd>
                 </dl>
             </div>
@@ -74,7 +78,7 @@
                     <?php echo $langs['my_balance']; ?>：<span>￥<span id="balance-value">0</span></span>
                 </div>
                 <div class="account-recharge fl">
-                    <button id="recharge" class="btn2">充值</button>
+                    <button id="recharge" class="btn2"><?php echo $langs['top_up']; ?></button>
                 </div>
             </div>
         </div>
@@ -86,7 +90,7 @@
     <div id="alertModel" class="alertModel">
         <a id="alert" data-reveal-id="alertModel" data-animation="fade"></a>
         <span id="alert-msg"></span>
-        <button id="btn-ok" class="btn">知道了</button>
+        <button id="btn-ok" class="btn"><?php echo $langs['knew']; ?></button>
         <a id="btn-close" class="close-reveal-modal"><img src="/images/icon_close.png" height="24" width="24"></a>
     </div>
 

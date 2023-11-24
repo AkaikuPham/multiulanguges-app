@@ -7,6 +7,8 @@ include('../check_lang.php');
  * @return string
  */
 function addShop(){
+    global $langs;
+
     $arr=$_POST; 
     //生成shopId
     $sql="select max(shopId) as m from dfz_shop";
@@ -29,7 +31,7 @@ function addShop(){
     $sql="select * from dfz_shop where shopId='".$arr['shopId']."'"; 
     $row=fetchOne($sql);
     if($row){
-        $mes="<p>501异常：店铺重复!</p><a href='addShop.php' target='mainFrame'>重新添加</a>";
+        $mes="<p>501异常：店铺重复!</p><a href='addShop.php' target='mainFrame'>" . $langs['readd'] . "</a>";
         return $mes;
     }
     if($uploadFiles){
@@ -41,7 +43,7 @@ function addShop(){
     if($res){ 
         header("location:listShop.php");
     }else{
-        $mes="<p>添加失败!</p><a href='addShop.php' target='mainFrame'>重新添加</a>";
+        $mes="<p>添加失败!</p><a href='addShop.php' target='mainFrame'>" . $langs['readd'] . "</a>";
         
     }
     return $mes;

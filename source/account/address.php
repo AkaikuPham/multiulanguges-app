@@ -1,3 +1,7 @@
+<?php
+    include('check_lang.php');
+?>
+
 <!DOCTYPE html>
 <html>
 
@@ -21,7 +25,7 @@
     <link rel=stylesheet href="/style/order.css">
     <link rel=stylesheet href="/style/footer_2.css">
     <link rel=stylesheet href="/style/form.css">
-    <title>订饭组</title>
+    <title><?php echo $langs['meal_ordering_group']; ?></title>
 </head>
 
 <body>
@@ -31,7 +35,7 @@
         <div class="content-left fl">
             <div class="menu-left">
                 <dl>
-                    <dt>个人中心</dt>
+                    <dt><?php echo $langs['personal_center']; ?></dt>
                     <dd class="menu-item">
                         <span class="left-icon">
                             <img src="/images/icon_order.png" width="18px" height="18px">
@@ -42,7 +46,7 @@
                         <span class="left-icon">
                             <img src="/images/icon_address.png" width="18px" height="18px">
                         </span>
-                        <a href="address">送餐地址</a>
+                        <a href="address"><?php echo $langs['delivery_address']; ?></a>
                     </dd>
                     <dd class="menu-item">
                         <span class="left-icon">
@@ -60,7 +64,7 @@
                         <span class="left-icon">
                             <img src="/images/icon_settings.png" width="18px" height="18px">
                         </span>
-                        <a href="setting">账户设置</a>
+                        <a href="setting"><?php echo $langs['account_settings_02']; ?></a>
                     </dd>
                 </dl>
             </div>
@@ -68,15 +72,15 @@
         <!--右侧内容-->
         <div class="content-right fl">
             <div class="summary fl">
-                <h3 class="summary-header">送餐地址</h3>
+                <h3 class="summary-header"><?php echo $langs['delivery_address']; ?></h3>
             </div>
             <div class="accountform">
                 <div>
                     <div class="accountformfield">
-                        <label>我的饭组</label> <span id="myFanzu">&nbsp;</span>
+                        <label><?php echo $langs['my_rice_set']; ?></label> <span id="myFanzu">&nbsp;</span>
                     </div>
                     <div class="accountformfield">
-                        <label>姓名</label><input id="name" placeholder="请输入您的姓名">
+                        <label><?php echo $langs['name']; ?></label><input id="name" placeholder="<?php echo $langs['enter_your_name']; ?>">
                         <div class="accountformfield-hint form-error">
                             <span id="error-name"></span>
                         </div>
@@ -88,20 +92,20 @@
                         </div>
                     </div>
                     <div class="accountformfield">
-                        <label>地点</label>
+                        <label><?php echo $langs['place']; ?></label>
                         <span><span id="place"></span>&nbsp;&nbsp;
                         </span>
                     </div>
                     <div class="accountformfield">
-                        <label>详细地址</label>
-                        <input id="address-detail" placeholder="详细地址">
+                        <label><?php echo $langs['address_02']; ?></label>
+                        <input id="address-detail" placeholder="<?php echo $langs['address_02']; ?>">
                         <div class="accountformfield-hint form-error">
                             <span id="error-detail"></span>
                         </div>
                     </div>
                 </div>
                 <div class="accountform-buttons">
-                    <a id="save-address" class="save-btn" href="#">保存</a>
+                    <a id="save-address" class="save-btn" href="#"><?php echo $langs['keep']; ?></a>
                 </div>
             </div>
         </div>
@@ -112,7 +116,7 @@
     <div id="alertModel" class="alertModel">
         <a id="alert" data-reveal-id="alertModel" data-animation="fade"></a>
         <span id="alert-msg"></span>
-        <button id="btn-ok" class="btn">知道了</button>
+        <button id="btn-ok" class="btn"><?php echo $langs['knew']; ?></button>
         <a id="btn-close" class="close-reveal-modal"><img src="/images/icon_close.png" height="24" width="24"></a>
     </div>
 

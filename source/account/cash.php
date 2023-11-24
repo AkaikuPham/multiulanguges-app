@@ -1,3 +1,7 @@
+<?php
+    include('check_lang.php');
+?>
+
 <!DOCTYPE html>
 <html>
 
@@ -21,7 +25,7 @@
     <link rel=stylesheet href="/style/order.css">
     <link rel=stylesheet href="/style/footer_2.css">
     <link rel=stylesheet href="/style/cash.css">
-    <title>订饭组</title>
+    <title><?php echo $langs['meal_ordering_group']; ?></title>
 </head>
 
 <body>
@@ -31,23 +35,23 @@
         <div class="content-left fl">
             <div class="menu-left">
                 <dl>
-                    <dt>个人中心</dt>
+                    <dt><?php echo $langs['personal_center']; ?></dt>
                     <dd class=""><a href="order"><?php echo $langs['my_order']; ?></a></dd>
-                    <dd class=""><a href="address">送餐地址</a></dd>
+                    <dd class=""><a href="address"><?php echo $langs['delivery_address']; ?></a></dd>
                     <dd class=""><a href="score"><?php echo $langs['my_scores']; ?></a></dd>
                     <dd class=""><a href="balance"><?php echo $langs['my_balance']; ?></a></dd>
-                    <dd class=""><a href="setting">账户设置</a></dd>
+                    <dd class=""><a href="setting"><?php echo $langs['account_settings_02']; ?></a></dd>
                 </dl>
             </div>
         </div>
         <!--右侧内容-->
         <div class="content-right fl">
             <div class="summary fl">
-                <h3 class="summary-header">代金券</h3>
+                <h3 class="summary-header"><?php echo $langs['payment_ticket']; ?></h3>
                 <div class="summary-info">
-                    <a class="ft-blk" href="">添加代金券</a>
+                    <a class="ft-blk" href=""><?php echo $langs['add_voucher']; ?></a>
                     <span>|</span>
-                    <a class="ft-blk" href="">未使用(0)</a>
+                    <a class="ft-blk" href=""><?php echo $langs['unused']; ?></a>
                 </div>
             </div>
             <div class="cash">
@@ -60,15 +64,15 @@
                         </div>
                         <div class="fl details">
                             <div class="txt">
-                                限时代金券
+                                <?php echo $langs['limited_time_coupons']; ?>
                             </div>
                             <dl class="">
-                                <dt>代金券号：</dt>
+                                <dt><?php echo $langs['voucher_number']; ?></dt>
                                 <dd>680015</dd>
                             </dl>
                             <dl class="">
-                                <dt>适用商家：</dt>
-                                <dd>齐鲁大厦</dd>
+                                <dt><?php echo $langs['applicable_merchants']; ?></dt>
+                                <dd><?php echo $langs['qilu_building']; ?></dd>
                             </dl>
                             <dl class="">
                                 <dt><?php echo $langs['available_mobile_pn']; ?></dt>
@@ -77,7 +81,7 @@
                         </div>
                         <div class="status">
                             <div class="status-limit">
-                                有效期: 1天
+                                <?php echo $langs['validity_period']; ?> 1天
                             </div>
                         </div>
                     </li>
@@ -89,15 +93,15 @@
                         </div>
                         <div class="fl details">
                             <div class="txt">
-                                限时代金券
+                                <?php echo $langs['limited_time_coupons']; ?>
                             </div>
                             <dl class="">
-                                <dt>代金券号：</dt>
+                                <dt><?php echo $langs['voucher_number']; ?></dt>
                                 <dd>680015</dd>
                             </dl>
                             <dl class="clearfix">
-                                <dt>适用商家：</dt>
-                                <dd>齐鲁大厦</dd>
+                                <dt><?php echo $langs['applicable_merchants']; ?></dt>
+                                <dd><?php echo $langs['qilu_building']; ?></dd>
                             </dl>
                             <dl class="clearfix">
                                 <dt><?php echo $langs['available_mobile_pn']; ?></dt>
@@ -117,15 +121,15 @@
                         </div>
                         <div class="fl details">
                             <div class="txt">
-                                限时代金券
+                                <?php echo $langs['limited_time_coupons']; ?>
                             </div>
                             <dl class="">
-                                <dt>代金券号：</dt>
+                                <dt><?php echo $langs['voucher_number']; ?></dt>
                                 <dd>680015</dd>
                             </dl>
                             <dl class="clearfix">
-                                <dt>适用商家：</dt>
-                                <dd>齐鲁大厦</dd>
+                                <dt><?php echo $langs['applicable_merchants']; ?></dt>
+                                <dd><?php echo $langs['qilu_building']; ?></dd>
                             </dl>
                             <dl class="clearfix">
                                 <dt><?php echo $langs['available_mobile_pn']; ?></dt>

@@ -1,9 +1,13 @@
+<?php
+include('check_lang.php');
+?>
+
 <!DOCTYPE html>
 <html>
 
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <meta name="description" content="“订饭组（dingfanzu.com）”是北京地区知名的在线外卖订餐O2O平台，是写字楼白领专属订餐网站。已覆盖北京数百个写字楼，数十万用户，聚集了数千家餐饮商户。订外卖，找订饭组。" />
+    <meta name="description" content="<?php echo $langs['place_meta_02']; ?>" />
     <script src="scripts/baidu_js_push.js"></script>
     <script src="scripts/jquery-1.8.3.js"></script>
     <script src="scripts/jquery.reveal.js"></script>
@@ -37,7 +41,7 @@
 
         <div class="place-wrap-1">
             <div class="place-cc">
-                <span>北京</span>
+                <span><?php echo $langs['beijing']; ?></span>
                 <a><?php echo $langs['switch_city']; ?></a>
 
             </div>
@@ -157,7 +161,7 @@
         <?php require_once 'layouts/shop_cart.php'; ?>
 
         <ul class="place-nav n">
-            <li><a class="city">北京</a></li>
+            <li><a class="city"><?php echo $langs['beijing']; ?></a></li>
             <li><a class="city"><?php echo $langs['tianjin']; ?></a></li>
         </ul>
     </div>
@@ -168,7 +172,7 @@
     <div id="alertModel" class="alertModel">
         <a id="alert" data-reveal-id="alertModel" data-animation="fade"></a>
         <span id="alert-msg"></span>
-        <button id="btn-ok" class="btn">知道了</button>
+        <button id="btn-ok" class="btn"><?php echo $langs['knew']; ?></button>
         <a class="close-reveal-modal"><img src="images/icon_close.png" height="24" width="24"></a>
     </div>
 

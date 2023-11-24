@@ -1,9 +1,13 @@
+<?php
+    include('check_lang.php');
+?>
+
 <!DOCTYPE html>
 <html>
 
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <meta name="description" content="订饭组是北京地区知名的在线外卖订餐O2O平台，是写字楼白领专属订餐网站。已覆盖北京数百个写字楼，数十万用户，聚集了数千家餐饮商户。订外卖，找订饭组。" />
+    <meta name="description" content="<?php echo $langs['template_shop_meta']; ?>" />
     <script src="/scripts/jquery-1.8.3.js"></script>
     <script src="/scripts/jquery.reveal.js"></script>
     <script src="/scripts/jquery.cookie.js"></script>
@@ -23,7 +27,7 @@
     <link rel=stylesheet href="/style/leftmenu.css">
     <link rel=stylesheet href="/style/reveal.css">
     <link rel=stylesheet href="/style/login.css">
-    <title>订饭组-外卖_订餐官网</title>
+    <title><?php echo $langs['meal_ordering_website']; ?></title>
 </head>
 
 <body>
@@ -75,7 +79,7 @@
             <li><a href="/account/setting.php" target=""><?php echo $langs['account_settings']; ?></a></li>
             <li><a href="/account/order.php" target=""><?php echo $langs['my_order']; ?></a></li>
             <li><a href="/account/balance.php" target=""><?php echo $langs['my_balance']; ?></a></li>
-            <li><a href="/account/cash.php" target="">代金券</a></li>
+            <li><a href="/account/cash.php" target=""><?php echo $langs['payment_ticket']; ?></a></li>
             <li><a href="/account/balance.php" target=""><?php echo $langs['my_address']; ?></a></li>
             <li><a id="sub-logout" href="" target=""><?php echo $langs['logout']; ?></a></li>
         </ul>

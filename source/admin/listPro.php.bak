@@ -70,7 +70,7 @@ if(!$rows){
                         <thead>
                             <tr>
                                 <th width="15%">商品编号</th>
-                                <th width="15%">商品名称</th>
+                                <th width="15%"><?php echo $langs['product_name']; ?></th>
                                 <th width="10%">商品分类</th>
                                 <th width="10%">所属店铺</th>
                                 <th width="10%">价格</th> 
@@ -92,7 +92,7 @@ if(!$rows){
                                 <td><?php echo date("Y-m-d H:i:s",$row['pubTime']);?></td>
                                 <td><img src="<?php echo IMG_50.$row['icon'].'?v='.time();?>"/></td>
                                 <td>
-                                				<a class="btn btn-link" onclick="editPro(<?php echo $row['id'];?>,<?php echo $row['pSn'];?>)">修改</a><a class="btn btn-link"  onclick="delPro(<?php echo $row['id'];?>)">删除</a>
+                                				<a class="btn btn-link" onclick="editPro(<?php echo $row['id'];?>,<?php echo $row['pSn'];?>)"><?php echo $langs['revise']; ?></a><a class="btn btn-link"  onclick="delPro(<?php echo $row['id'];?>)">删除</a>
 					                            
                                 
                                 </td>

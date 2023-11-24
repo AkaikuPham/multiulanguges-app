@@ -1,9 +1,13 @@
+<?php
+include('check_lang.php');
+?>
+
 <!DOCTYPE html>
 <html>
 
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <meta name="description" content="“订饭组（dingfanzu.com）”是北京地区知名的在线外卖订餐O2O平台，是写字楼白领专属订餐网站。已覆盖北京数百个写字楼，数十万用户，聚集了数千家餐饮商户。订外卖，找订饭组。" />
+    <meta name="description" content="<?php echo $langs['place_meta_02']; ?>" />
     <script src="/scripts/jquery-1.8.3.js"></script>
     <script src="/scripts/jquery.reveal.js"></script>
     <script src="/scripts/jquery.cookie.js"></script>
@@ -23,7 +27,7 @@
     <link rel=stylesheet href="/style/leftmenu.css">
     <link rel=stylesheet href="/style/reveal.css">
     <link rel=stylesheet href="/style/login.css">
-    <title>订饭组-写字楼外卖_订餐官网</title>
+    <title><?php echo $langs['food_ordering_website']; ?></title>
 </head>
 
 <body>
@@ -56,15 +60,15 @@
                 <dt>
 
                 </dt>
-                <dd id='i1' class='active leftmenu-item'><a href='#'>哈哈</a></dd>
-                <dd id='i2' class=' leftmenu-item'><a href='#'>盖饭类</a></dd>
-                <dd id='i3' class=' leftmenu-item'><a href='#'>盖饭1</a></dd>
-                <dd id='i4' class=' leftmenu-item'><a href='#'>面类</a></dd>
-                <dd id='i5' class=' leftmenu-item'><a href='#'>套餐类</a></dd>
-                <dd id='i6' class=' leftmenu-item'><a href='#'>面食</a></dd>
-                <dd id='i7' class=' leftmenu-item'><a href='#'>饮品</a></dd>
-                <dd id='i8' class=' leftmenu-item'><a href='#'>哈哈</a></dd>
-                <dd id='i9' class=' leftmenu-item'><a href='#'>素菜</a></dd>
+                <dd id='i1' class='active leftmenu-item'><a href='#'><?php echo $langs['haha']; ?></a></dd>
+                <dd id='i2' class=' leftmenu-item'><a href='#'><?php echo $langs['rice_bowl_type']; ?></a></dd>
+                <dd id='i3' class=' leftmenu-item'><a href='#'><?php echo $langs['rice_bowl_1']; ?></a></dd>
+                <dd id='i4' class=' leftmenu-item'><a href='#'><?php echo $langs['noodles']; ?></a></dd>
+                <dd id='i5' class=' leftmenu-item'><a href='#'><?php echo $langs['set_meal']; ?></a></dd>
+                <dd id='i6' class=' leftmenu-item'><a href='#'><?php echo $langs['pasta']; ?></a></dd>
+                <dd id='i7' class=' leftmenu-item'><a href='#'><?php echo $langs['drinks']; ?></a></dd>
+                <dd id='i8' class=' leftmenu-item'><a href='#'><?php echo $langs['haha']; ?></a></dd>
+                <dd id='i9' class=' leftmenu-item'><a href='#'><?php echo $langs['vegetarian_dishes']; ?></a></dd>
 
             </dl>
         </div>
@@ -73,7 +77,7 @@
             <li><a href="account/setting.php" target=""><?php echo $langs['account_settings']; ?></a></li>
             <li><a href="account/order.php" target=""><?php echo $langs['my_order']; ?></a></li>
             <li><a href="account/balance.php" target=""><?php echo $langs['my_balance']; ?></a></li>
-            <li><a href="account/cash.php" target="">代金券</a></li>
+            <li><a href="account/cash.php" target=""><?php echo $langs['payment_ticket']; ?></a></li>
             <li><a href="account/balance.php" target=""><?php echo $langs['my_address']; ?></a></li>
             <li><a id="sub-logout" href="" target=""><?php echo $langs['logout']; ?></a></li>
         </ul>

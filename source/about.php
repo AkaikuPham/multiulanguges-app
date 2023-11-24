@@ -1,9 +1,13 @@
+<?php
+include('check_lang.php');
+?>
+
 <!DOCTYPE html>
 <html>
 
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <meta name="description" content="订饭组是北京地区知名的在线外卖订餐O2O平台，是写字楼白领专属订餐网站。已覆盖北京数百个写字楼，数十万用户，聚集了数千家餐饮商户。订外卖，找订饭组~" />
+    <meta name="description" content="<?php echo $langs['about_meta']; ?>" />
     <script src="scripts/jquery-1.8.3.js"></script>
     <script src="scripts/jquery.reveal.js"></script>
     <script src="scripts/jquery.cookie.js"></script>
@@ -19,7 +23,7 @@
     <link rel=stylesheet href="style/reveal.css">
     <link rel=stylesheet href="style/login.css">
     <link rel=stylesheet href="style/about.css">
-    <title>关于-订饭组-写字楼外卖_订餐组_订餐官网</title>
+    <title><?php echo $langs['about_title']; ?></title>
     <script>
         var _hmt = _hmt || [];
         (function() {
@@ -45,7 +49,7 @@
                     <li><a forward="guanyuwomen" class="static"><?php echo $langs['about_us']; ?></a></li>
                     <li><a forward="lianxiwomen" class="static"><?php echo $langs['contact_us']; ?></a></li>
                     <li><a forward="tousujianyi" class="static"><?php echo $langs['suggestion']; ?></a></li>
-                    <li><a forward="jiaruwomen" class="static">加入我们</a></li>
+                    <li><a forward="jiaruwomen" class="static"><?php echo $langs['join_us']; ?></a></li>
                     <li><a forward="shangjiaruzhu" class="static"><?php echo $langs['merchants_settle_in']; ?></a></li>
                 </ul>
             </div>
@@ -55,23 +59,23 @@
             <!--关于我们-->
             <div id="guanyuwomen" class="body-wrap n">
                 <div class="body-header">
-                    <span>订饭组</span>
+                    <span><?php echo $langs['meal_ordering_group']; ?></span>
                 </div>
                 <div class="body-content">
                     <span>
                         <p class="introduction">
-                            “订饭组”是中国专业的餐饮O2O平台
+                            <?php echo $langs['catering_O2O_platform']; ?>
                         </p>
-                        <h3>发展历程</h3>
+                        <h3><?php echo $langs['development_path']; ?></h3>
                         <div class="history">
-                            2015年04月 “订饭组”网站正式上线<br>
-                            2016年09月 推出餐厅运营一体化解决方案<br>
-                            2016年10月 日均订单突破500单<br>
-                            2017年02月 项目宣布失败（资金不足）<br>
-                            2017年03月 项目开源<br>
-                            2023年03月 项目更新
+                            <?php echo $langs['2015_launched']; ?><br>
+                            <?php echo $langs['201609_launched']; ?><br>
+                            <?php echo $langs['201610_launched']; ?><br>
+                            <?php echo $langs['201702_launched']; ?><br>
+                            <?php echo $langs['201703_launched']; ?><br>
+                            <?php echo $langs['202303_launched']; ?>
                             <br>
-                            开发者：<a href="https://github.com/chanson1024/dingfanzu" style="color:#0000ff;">lengqin1024</a>
+                            <?php echo $langs['developer']; ?>：<a href="https://github.com/chanson1024/dingfanzu" style="color:#0000ff;">lengqin1024</a>
                         </div>
                     </span>
                 </div>
@@ -83,8 +87,8 @@
                 </div>
                 <div class="body-content">
                     <span class="bft">
-                        <p>客服微信：java2048</p>
-                        <p>网站主页：https://github.com/chanson1024/dingfanzu</p>
+                        <p><?php echo $langs['customer_service_wechat']; ?>：java2048</p>
+                        <p><?php echo $langs['home_page_1']; ?>：https://github.com/chanson1024/dingfanzu</p>
                     </span>
 
                 </div>
@@ -95,22 +99,22 @@
                     <span><?php echo $langs['suggestion']; ?></span>
                 </div>
                 <div class="body-content">
-                    <span class="bft">任何问题和建议，可以告诉我们哦~</span>
+                    <span class="bft"><?php echo $langs['tell_us_1']; ?></span>
                     <span>
                         <textarea id="tousu-txt" maxLength="150" /></textarea>
                     </span>
                     <span class="paddingTB-20">
-                        <a id="tousu-commit" class="btn-commit">提交</a>
+                        <a id="tousu-commit" class="btn-commit"><?php echo $langs['submit']; ?></a>
                     </span>
                 </div>
             </div>
             <!--加入我们-->
             <div id="jiaruwomen" class="body-wrap n">
                 <div class="body-header">
-                    <span>加入我们</span>
+                    <span><?php echo $langs['join_us']; ?></span>
                 </div>
                 <div class="body-content">
-                    <span class="bft">暂无招聘计划</span>
+                    <span class="bft"><?php echo $langs['no_recruitment_plan_yet']; ?></span>
                 </div>
             </div>
             <!--商家入驻-->
@@ -119,13 +123,13 @@
                     <span><?php echo $langs['merchants_settle_in']; ?></span>
                 </div>
                 <div class="body-content">
-                    <span class="bft">您好，订饭组正在需要寻找更多的外卖店，他需要味道好，服务好，干净卫生，价格合理，当然最好是中式快餐哦，如果您有合适的餐馆推荐，一定要告诉我们哦~我们会去沟通考察。</span>
+                    <span class="bft"><?php echo $langs['meta_01']; ?></span>
                     <div class="shangjiaruzhu">
-                        <span><label class="bft">餐馆名称： </label><input id="hotelName" maxlength="20"></span>
-                        <span><label class="bft">联系电话： </label><input id="hotelPhone" maxlength="20"></span>
-                        <span><label class="bft">餐馆位置： </label><input id="hotelLocation" maxlength="30"></span>
-                        <span><label class="bft">简单介绍： </label><input id="hotelIntroduction" maxlength="100"></span>
-                        <span><a id="hotel-commit" class="btn-commit">提交</a></span>
+                        <span><label class="bft"><?php echo $langs['restaurant_name']; ?> </label><input id="hotelName" maxlength="20"></span>
+                        <span><label class="bft"><?php echo $langs['contact_number']; ?> </label><input id="hotelPhone" maxlength="20"></span>
+                        <span><label class="bft"><?php echo $langs['restaurant_location']; ?> </label><input id="hotelLocation" maxlength="30"></span>
+                        <span><label class="bft"><?php echo $langs['brief_introdction']; ?> </label><input id="hotelIntroduction" maxlength="100"></span>
+                        <span><a id="hotel-commit" class="btn-commit"><?php echo $langs['submit']; ?></a></span>
                     </div>
                 </div>
             </div>
@@ -148,7 +152,7 @@
     <div id="alertModel" class="alertModel">
         <a id="alert" data-reveal-id="alertModel" data-animation="fade"></a>
         <span id="alert-msg"></span>
-        <button id="btn-ok" class="btn">知道了</button>
+        <button id="btn-ok" class="btn"><?php echo $langs['knew']; ?></button>
         <a class="close-reveal-modal"><img src="images/icon_close.png" height="24" width="24"></a>
     </div>
 

@@ -133,7 +133,7 @@ checkLogined();
                     <p id="alert-body">内容</p>
                 </div>
                 <div class="modal-footer">
-                    <button id="btn-ok" type="button" class="btn btn-default" data-dismiss="modal">知道了</button>
+                    <button id="btn-ok" type="button" class="btn btn-default" data-dismiss="modal"><?php echo $langs['knew']; ?></button>
                 </div>
             </div>
         </div>

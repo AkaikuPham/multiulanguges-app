@@ -1,12 +1,17 @@
 <?php 
+
+include('../check_lang.php');
+
 /**
  * 添加分类的操作
  * @return string
  */
 function addCate(){
+	global $langs;
+
 	//$arr=$_POST;
 	if(empty($_POST['cname'])||empty($_POST['weight'])){
-		$mes="不能为空！<br/><a href='addCate.php'>重新添加</a>|<a href='listCate.php'>查看分类</a>";
+		$mes = $langs['not_empty'] . "！<br/><a href='addCate.php'>" . $langs['readd'] . "</a>|<a href='listCate.php'>查看分类</a>";
 		return $mes;
 	}
 	$arr=$_POST;
@@ -18,7 +23,7 @@ function addCate(){
 	if(insert("dfz_cate",$arr)){
 		$mes="分类添加成功!<br/><a href='addCate.php'>继续添加</a>|<a href='listCate.php'>查看分类</a>";
 	}else{
-		$mes="分类添加失败！<br/><a href='addCate.php'>重新添加</a>|<a href='listCate.php'>查看分类</a>";
+		$mes="分类添加失败！<br/><a href='addCate.php'>" . $langs['readd'] . "</a>|<a href='listCate.php'>查看分类</a>";
 	}
 	return $mes;
 }
